@@ -143,14 +143,20 @@
                     const result = await response.json();
 
                     if (response.ok) {
-                        formStatus.innerHTML = `<p class="text-green-600" data-lang-en="Message sent successfully! Thank you." data-lang-es="¡Mensaje enviado con éxito! Gracias.">${result.message || 'Message sent successfully! Thank you.'}</p>`;
+                        formStatus.innerHTML = `<div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800" role="alert">
+                                                <span class="font-medium" data-lang-en="Success!" data-lang-es="¡Éxito!">Success!</span> ${result.message || 'Message sent successfully! Thank you.'}
+                                            </div>`;
                         contactForm.reset();
                     } else {
-                        formStatus.innerHTML = `<p class="text-red-600" data-lang-en="Error: ${result.message || 'Could not send message.'}" data-lang-es="Error: ${result.message || 'No se pudo enviar el mensaje.'}">Error: ${result.message || 'Could not send message.'}</p>`;
+                        formStatus.innerHTML = `<div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+                                                <span class="font-medium" data-lang-en="Error!" data-lang-es="¡Error!">Error!</span> ${result.message || 'Could not send message.'}
+                                            </div>`;
                     }
                 } catch (error) {
                     console.error('Submission error:', error);
-                    formStatus.innerHTML = '<p class="text-red-600" data-lang-en="An unexpected error occurred. Please try again." data-lang-es="Ocurrió un error inesperado. Por favor, inténtalo de nuevo.">An unexpected error occurred. Please try again.</p>';
+                    formStatus.innerHTML = `<div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+                                                <span class="font-medium" data-lang-en="Error!" data-lang-es="¡Error!">Error!</span> An unexpected error occurred. Please try again.
+                                            </div>`;
                 }
                 // Attempt to re-translate dynamic message
                 if (typeof window.updateAllTexts === 'function') { window.updateAllTexts(document.documentElement.lang || 'en'); }
