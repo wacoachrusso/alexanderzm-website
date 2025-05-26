@@ -1,6 +1,5 @@
 import { Resend } from 'resend';
-import fs from 'fs';
-import path from 'path';
+
 
 export const handler = async (event) => {
   if (event.httpMethod !== 'POST') {
@@ -36,29 +35,7 @@ export const handler = async (event) => {
     const toEmails = ['kriz713zm@gmail.com', 'wacoachrusso@gmail.com', 'yorlemg@gmail.com'];
     const subject = `New Message for Alex from ${name}!`;
 
-    // --- Logo Attachment Logic ---
-    let logoAttachment = null;
-    try {
-      // Get the directory of the current module
-      const currentDir = path.dirname(new URL(import.meta.url).pathname);
-      // Construct the path to the logo file relative to the site root
-      // Assuming the function is in 'netlify/functions/' and image is in 'images/' at the site root.
-      // The path needs to go up two levels from the function file to reach the site root.
-      const logoPath = path.resolve(currentDir, '..', '..', 'images', 'logo.png');
-      
-      const logoContent = fs.readFileSync(logoPath);
-      logoAttachment = {
-        filename: 'logo.png',
-        content: logoContent, // Pass as Buffer
-        cid: 'alexsitelogo',
-        contentDisposition: 'inline',
-      };
-    } catch (err) {
-      console.error('Error reading logo file for CID attachment:', err);
-      // Optionally, you could send a specific error or log more details
-      // For now, we'll allow the email to send without the logo if it fails to read.
-    }
-    // --- End Logo Attachment Logic ---
+
 
     // Adapted HTML content from alex-form-notification.html
     const emailHtml = `
@@ -85,7 +62,7 @@ export const handler = async (event) => {
       <body>
           <div class="container">
               <div class="header">
-                  <img src="cid:alexsitelogo" alt="Alex's Website Logo" width="150" style="display:block; width:150px; max-width:150px; height:auto; border:0;">
+                  <img src="https://res.cloudinary.com/dcuwsbzv5/image/upload/v1748301292/logo_hkddf3.png" alt="Alex's Website Logo" width="150" style="display:block; width:150px; max-width:150px; height:auto; border:0;">
               </div>
               <div class="content">
                   <h1>Hooray! A new message for Alex!</h1>
@@ -115,7 +92,7 @@ export const handler = async (event) => {
       to: toEmails,
       subject: subject,
       html: emailHtml,
-      attachments: logoAttachment ? [logoAttachment] : [],
+
     });
 
     if (error) {
