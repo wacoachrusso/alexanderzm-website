@@ -199,6 +199,22 @@ body {
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem; /* Rounded corners */
+
+/* Logo Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.03); /* Slightly larger */
+    opacity: 0.95; /* Slightly more transparent */
+  }
+}
+
+.logo-pulse-animation {
+  animation: pulse 3.5s infinite ease-in-out; /* 3.5-second loop, smooth timing */
+}
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     margin-left: 0.5rem; /* Spacing between links */
     white-space: nowrap; /* Prevent individual link text from wrapping */
