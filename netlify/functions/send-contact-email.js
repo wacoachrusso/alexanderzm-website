@@ -59,7 +59,7 @@ export const handler = async (event) => {
       <body>
           <div class="container">
               <div class="header">
-                  <img src="https://alexanderzm.com/images/logo.png" alt="Alex's Website Logo">
+                  <img src="https://alexanderzm.com/images/logo.png" alt="Alex's Website Logo" width="150" style="display:block; width:150px; max-width:150px; height:auto; border:0;">
               </div>
               <div class="content">
                   <h1>Hooray! A new message for Alex!</h1>
