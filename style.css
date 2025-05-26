@@ -2,9 +2,9 @@
 
 body {
     font-family: 'Inter', sans-serif; /* Existing font */
-    background: linear-gradient(135deg, #3A6B5D 0%, #2A5A6E 100%); /* New gradient */
+    background: linear-gradient(135deg, #0072ff 0%, #0040C2 100%); /* New Radiant/Professional Blue Gradient */
     background-attachment: fixed; /* Gradient stays fixed on scroll */
-    color: #E8E8E8; /* New light default text color */
+    color: #E8E8E8; /* Light default text color */
     line-height: 1.6; /* Existing line height */
     min-height: 100vh; /* Ensure full viewport height coverage */
 }
