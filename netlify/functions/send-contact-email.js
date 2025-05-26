@@ -1,6 +1,4 @@
 import { Resend } from 'resend';
-import fs from 'fs';
-import path from 'path';
 
 export const handler = async (event) => {
   if (event.httpMethod !== 'POST') {
@@ -36,45 +34,6 @@ export const handler = async (event) => {
     const toEmails = ['kriz713zm@gmail.com', 'wacoachrusso@gmail.com', 'yorlemg@gmail.com'];
     const subject = `New Message for Alex from ${name}!`;
 
-    // Path to the logo file (assuming function is in netlify/functions and images is at root)
-    // __dirname will be /var/task/netlify/functions/send-contact-email (or similar in Netlify's environment)
-    // The build process should place the images folder relative to the function, or we need to adjust path based on build output.
-    // For local structure: path.join(__dirname, '..', '..', 'images', 'logo.png');
-    // In Netlify, files included in the function deployment are relative to the function's root.
-    // Let's assume 'images' is copied into the function's deployment package or accessible from project root.
-    // A safer bet is to ensure 'images/logo.png' is deployed with the function or use a full public URL if CID fails.
-    // For now, attempting to read relative to project root during build, hoping it's available to function.
-    // Netlify typically bundles the function and its dependencies. Accessing files outside the function's immediate directory can be tricky.
-    // A common pattern is to place assets needed by a function *within* that function's directory or a shared 'assets' dir deployed with functions.
-
-    // Let's try a path relative to the project root, assuming the build process makes it available.
-    // The `process.cwd()` in a Netlify function is usually the root of the function's unzipped package.
-    // If `images` is at the project root, and the function is `netlify/functions/your-func`, then `../../images/logo.png` from `__dirname` is a common approach.
-
-    let logoAttachment = null;
-    try {
-      const logoPath = path.resolve(process.cwd(), '..', 'images', 'logo.png'); // This path might need adjustment based on Netlify's build/deployment structure.
-                                                                            // A more robust way if files are at project root: process.env.LAMBDA_TASK_ROOT might be the function dir, then go up.
-                                                                            // Or, ensure `images/logo.png` is copied to the function's deployment package.
-                                                                            // For a simpler approach, let's assume `images` is in the root of the deployed function package if not using a complex build step.
-                                                                            // The most reliable path from a function at `netlify/functions/send-contact-email.js` to `images/logo.png` at project root is:
-      const resolvedLogoPath = path.join(__dirname, '..', '..', 'images', 'logo.png');
-
-      if (fs.existsSync(resolvedLogoPath)) {
-        const logoFileBuffer = fs.readFileSync(resolvedLogoPath);
-        logoAttachment = {
-          filename: 'logo.png',
-          content: logoFileBuffer.toString('base64'),
-          cid: 'alexlogo'
-        };
-      } else {
-        console.warn(`Logo file not found at ${resolvedLogoPath}. Email will be sent without embedded logo.`);
-      }
-    } catch (err) {
-      console.error('Error reading logo file:', err);
-      // Proceed without logo if there's an error reading it
-    }
-
     // Adapted HTML content from alex-form-notification.html
     const emailHtml = `
       <!DOCTYPE html>
@@ -100,7 +59,7 @@ export const handler = async (event) => {
       <body>
           <div class="container">
               <div class="header">
-                  <img src="cid:alexlogo" alt="Alex's Website Logo">
+                  <img src="https://alexanderzm.com/images/logo.png" alt="Alex's Website Logo">
               </div>
               <div class="content">
                   <h1>Hooray! A new message for Alex!</h1>
@@ -130,7 +89,6 @@ export const handler = async (event) => {
       to: toEmails,
       subject: subject,
       html: emailHtml,
-      attachments: logoAttachment ? [logoAttachment] : [],
     });
 
     if (error) {
