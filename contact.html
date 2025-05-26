@@ -58,11 +58,8 @@
                 <span data-lang-en="She'll make sure Alex gets your wonderful message!" data-lang-es="¡Ella se asegurará de que Alex reciba tu maravilloso mensaje!">She'll make sure Alex gets your wonderful message!</span>
             </p>
 
-            <!-- Netlify Contact Form -->
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="mt-12 max-w-xl mx-auto text-left bg-white p-8 rounded-lg shadow-xl">
-                <p class="hidden">
-                    <label data-lang-en="Don’t fill this out if you’re human" data-lang-es="No llenes esto si eres humano">Don’t fill this out if you’re human: <input name="bot-field" /></label>
-                </p>
+            <!-- Contact Form (Resend Integration) -->
+            <form id="contactForm" method="POST" class="mt-12 max-w-xl mx-auto text-left bg-white p-8 rounded-lg shadow-xl">
                 <div class="mb-6">
                     <label for="name" class="block mb-2 text-sm font-medium text-gray-700" data-lang-en="Your Name" data-lang-es="Tu Nombre">Your Name</label>
                     <input type="text" id="name" name="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-3" placeholder="Alex's Friend" required>
@@ -79,6 +76,7 @@
                     <button type="submit" class="hero-button bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-lg" data-lang-en="Send Message" data-lang-es="Enviar Mensaje">Send Message</button>
                 </div>
             </form>
+            <div id="formStatus" class="mt-4 text-center text-sm"></div>
 
             <div class="contact-icons flex justify-center space-x-8 text-5xl text-indigo-500 mt-10">
                 <span>👋</span> <!-- Waving hand -->
@@ -115,6 +113,49 @@
                 link.classList.remove('active');
             }
         });
+    </script>
+    <script>
+        // Contact Form Submission with Resend
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(event) {
+                event.preventDefault();
+                formStatus.innerHTML = '<p class="text-blue-600" data-lang-en="Sending your message..." data-lang-es="Enviando tu mensaje...">Sending your message...</p>';
+                // Attempt to re-translate dynamic message
+                if (typeof window.updateAllTexts === 'function') { window.updateAllTexts(document.documentElement.lang || 'en'); }
+
+                const formData = new FormData(contactForm);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const message = formData.get('message');
+
+                try {
+                    const response = await fetch('/.netlify/functions/send-contact-email', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ name, email, message }),
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        formStatus.innerHTML = `<p class="text-green-600" data-lang-en="Message sent successfully! Thank you." data-lang-es="¡Mensaje enviado con éxito! Gracias.">${result.message || 'Message sent successfully! Thank you.'}</p>`;
+                        contactForm.reset();
+                    } else {
+                        formStatus.innerHTML = `<p class="text-red-600" data-lang-en="Error: ${result.message || 'Could not send message.'}" data-lang-es="Error: ${result.message || 'No se pudo enviar el mensaje.'}">Error: ${result.message || 'Could not send message.'}</p>`;
+                    }
+                } catch (error) {
+                    console.error('Submission error:', error);
+                    formStatus.innerHTML = '<p class="text-red-600" data-lang-en="An unexpected error occurred. Please try again." data-lang-es="Ocurrió un error inesperado. Por favor, inténtalo de nuevo.">An unexpected error occurred. Please try again.</p>';
+                }
+                // Attempt to re-translate dynamic message
+                if (typeof window.updateAllTexts === 'function') { window.updateAllTexts(document.documentElement.lang || 'en'); }
+            });
+        }
     </script>
     <script src="language.js" defer></script>
 </body>

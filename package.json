@@ -1,0 +1,19 @@
+{
+  "name": "alexanderzm-website",
+  "version": "1.0.0",
+  "description": "Alex's Kindergarten Website with Resend email integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "netlify",
+    "resend",
+    "static-site"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "resend": "^3.2.0"
+  }
+}
