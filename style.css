@@ -199,22 +199,6 @@ body {
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem; /* Rounded corners */
-
-/* Logo Pulse Animation */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.03); /* Slightly larger */
-    opacity: 0.95; /* Slightly more transparent */
-  }
-}
-
-.logo-pulse-animation {
-  animation: pulse 3.5s infinite ease-in-out; /* 3.5-second loop, smooth timing */
-}
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     margin-left: 0.5rem; /* Spacing between links */
     white-space: nowrap; /* Prevent individual link text from wrapping */
@@ -287,6 +271,10 @@ body {
     box-shadow: 0 8px 16px rgba(0,0,0,0.08);
     margin-bottom: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card > *:last-child:is(p) {
+    margin-bottom: 0;
 }
 
 .content-card:hover {
@@ -444,4 +432,20 @@ body {
     justify-content: center;
     font-size: 1.5rem;
     line-height: 1;
+}
+
+/* Logo Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.03); /* Slightly larger */
+    opacity: 0.95; /* Slightly more transparent */
+  }
+}
+
+.logo-pulse-animation {
+  animation: pulse 3.5s infinite ease-in-out; /* 3.5-second loop, smooth timing */
 }
