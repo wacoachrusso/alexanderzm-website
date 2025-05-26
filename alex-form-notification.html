@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Message for Alex!</title>
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333333;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #22c55e; /* Website's vibrant green */
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header img {
+            max-width: 150px; /* Adjust size as needed */
+            height: auto;
+        }
+        .content {
+            padding: 30px 25px;
+            line-height: 1.6;
+        }
+        .content h1 {
+            color: #1e3a8a; /* A friendly dark blue, similar to logo's 'A' */
+            font-size: 24px;
+            margin-top: 0;
+        }
+        .content p {
+            margin-bottom: 15px;
+        }
+        .data-label {
+            font-weight: bold;
+            color: #4f46e5; /* Website's indigo */
+        }
+        .footer {
+            background-color: #eef2ff; /* Light indigo background */
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #555555;
+        }
+        .footer a {
+            color: #4f46e5; /* Website's indigo */
+            text-decoration: none;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4f46e5; /* Indigo */
+            color: #ffffff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Make sure this path is correct once deployed -->
+            <img src="https://alexanderzm.com/images/logo.png" alt="Alex's Website Logo">
+        </div>
+        <div class="content">
+            <h1>Hooray! A new message for Alex!</h1>
+            <p>Someone just sent a message through the contact form on <a href="https://alexanderzm.com" style="color: #22c55e; text-decoration: underline;">Alex's Website</a>. Here are the details:</p>
+            
+            <p><span class="data-label">From:</span> {{ .Data.name }}</p>
+            <p><span class="data-label">Grown-up's Email:</span> {{ .Data.email }}</p>
+            <p><span class="data-label">Message:</span></p>
+            <p style="background-color: #f9fafb; border-left: 3px solid #22c55e; padding: 10px; margin-left: 10px;">
+                {{ .Data.message }}
+            </p>
+
+            <p style="text-align: center;">
+                <a href="https://alexanderzm.com" class="button">Visit Alex's Website</a>
+            </p>
+        </div>
+        <div class="footer">
+            <p>This email was sent automatically from <a href="https://alexanderzm.com">alexanderzm.com</a>.</p>
+            <p>You can manage your form submissions in your Netlify dashboard.</p>
+        </div>
+    </div>
+</body>
+</html>
