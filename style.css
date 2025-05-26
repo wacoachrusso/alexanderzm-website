@@ -1,10 +1,12 @@
 /* Alex's Soccer World - Custom Styles */
 
 body {
-    font-family: 'Inter', sans-serif; /* Already set, but good to have here */
-    background-color: #f0fdf4; /* Light green like a soccer field */
-    color: #333; /* Default text color */
-    line-height: 1.6;
+    font-family: 'Inter', sans-serif; /* Existing font */
+    background: linear-gradient(135deg, #3A6B5D 0%, #2A5A6E 100%); /* New gradient */
+    background-attachment: fixed; /* Gradient stays fixed on scroll */
+    color: #E8E8E8; /* New light default text color */
+    line-height: 1.6; /* Existing line height */
+    min-height: 100vh; /* Ensure full viewport height coverage */
 }
 
 /* Consistent Page Padding */
