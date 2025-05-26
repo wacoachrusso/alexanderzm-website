@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alex's Soccer Website Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .preview-container {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            height: 600px;
+        }
+        .preview-header {
+            background: #f5f5f5;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            font-weight: bold;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .instructions {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alex's Soccer Website Preview</h1>
+    
+    <div class="preview-container">
+        <div class="preview-header">
+            Website Preview (Interactive)
+        </div>
+        <iframe id="websitePreview" srcdoc=""></iframe>
+    </div>
+
+    <div class="instructions">
+        <h3>How to use this preview:</h3>
+        <p>This is an interactive preview of Alex's soccer website. You can navigate between pages using the links in the navigation bar.</p>
+        <p><strong>Note:</strong> Some external resources like fonts and images might not load correctly in this preview. For the full experience, open the files directly in a web browser.</p>
+    </div>
+
+    <script>
+        // Encode the HTML content for the iframe
+        const htmlContent = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <base href="file:///c:/Users/wacoa/OneDrive/Desktop/alexanderzm%20website/">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Alex's Soccer World</title>
+            <script src="https://cdn.tailwindcss.com"><\/script>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+            <style>
+                body { font-family: 'Inter', sans-serif; background-color: #f0fdf4; }
+                .soccer-ball-icon { animation: bounce 2s infinite; }
+                @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+            </style>
+        </head>
+        <body class="min-h-screen">
+            <header class="bg-green-600 text-white p-4">
+                <div class="container mx-auto flex justify-between items-center">
+                    <a href="#" class="text-2xl font-bold">Alex's Soccer World</a>
+                    <nav>
+                        <a href="#home" class="px-4 py-2 rounded hover:bg-green-700 mr-2">Home</a>
+                        <a href="#about" class="bg-white text-green-700 px-4 py-2 rounded font-bold">About Me</a>
+                    </nav>
+                </div>
+            </header>
+            
+            <main class="container mx-auto p-4">
+                <div class="text-center my-8">
+                    <h1 class="text-4xl font-bold text-green-700 mb-4">Welcome to Alex's Soccer World! <span class="soccer-ball-icon">⚽</span></h1>
+                    <p class="text-xl text-gray-700">A 4-year-old's dream to become a soccer star!</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+                    <h2 class="text-2xl font-bold text-green-600 mb-4">Quick Navigation</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <a href="#home" class="block p-4 bg-green-100 rounded-lg hover:bg-green-200 transition-colors">
+                            <h3 class="font-bold text-green-800">Home Page</h3>
+                            <p class="text-sm text-gray-600">Learn about Alex's soccer journey</p>
+                        </a>
+                        <a href="#about" class="block p-4 bg-green-100 rounded-lg hover:bg-green-200 transition-colors">
+                            <h3 class="font-bold text-green-800">About Alex</h3>
+                            <p class="text-sm text-gray-600">Get to know the future soccer star</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="text-center py-8">
+                    <p class="text-gray-600">This is a preview. For the full experience, open the files in your browser.</p>
+                    <button onclick="window.top.postMessage('openInBrowser', '*')" class="mt-4 px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                        Open in Browser
+                    </button>
+                </div>
+            </main>
+            
+            <footer class="bg-green-700 text-white text-center p-4 mt-8">
+                <p>© 2024 Alex's Soccer World - Made with ❤️</p>
+            </footer>
+            
+            <script>
+                // Handle navigation within the preview
+                document.querySelectorAll('a[href^="#"]').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const page = link.getAttribute('href').substring(1);
+                        showPage(page);
+                    });
+                });
+                
+                function showPage(page) {
+                    // In a real preview, this would load the actual page content
+                    const mainContent = document.querySelector('main');
+                    mainContent.innerHTML = `
+                        <div class="text-center py-16">
+                            <h2 class="text-3xl font-bold text-green-700 mb-4">${page === 'home' ? 'Home Page' : 'About Alex'}</h2>
+                            <p class="text-xl text-gray-600 mb-8">This is a preview of the ${page} page.</p>
+                            <p class="text-gray-500">In the actual website, this would show the full ${page} content.</p>
+                            <button onclick="window.top.postMessage('openInBrowser', '*')" class="mt-6 px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                                Open Full Site in Browser
+                            </button>
+                        </div>
+                    `;
+                }
+            <\/script>
+        </body>
+        </html>
+        `;
+
+        // Set the iframe content
+        document.getElementById('websitePreview').srcdoc = htmlContent;
+
+        // Listen for messages from the iframe
+        window.addEventListener('message', (event) => {
+            if (event.data === 'openInBrowser') {
+                // This would open the actual file in the browser
+                window.open('file:///c:/Users/wacoa/OneDrive/Desktop/alexanderzm%20website/index.html', '_blank');
+            }
+        });
+    </script>
+</body>
+</html>

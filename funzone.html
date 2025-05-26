@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-en="Alex's Fun Zone - Games & Activities!" data-lang-es="Zona Divertida de Alex - ¡Juegos y Actividades!">Alex's Fun Zone - Games & Activities!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-800">
+
+    <header class="main-nav">
+        <div class="page-container flex justify-between items-center">
+            <div class="site-title">
+                <span class="soccer-ball-logo">⚽</span>
+                <span data-lang-en="Alex's Soccer World" data-lang-es="El Mundo de Fútbol de Alex">Alex's Soccer World</span>
+            </div>
+            <div class="language-switcher" style="display: flex; align-items: center; gap: 10px;">
+                <button id="lang-en" class="language-button active-lang" data-lang-en="English" data-lang-es="Inglés">English</button>
+                <button id="lang-es" class="language-button" data-lang-en="Spanish" data-lang-es="Español">Español</button>
+            </div>
+            <button id="hamburger-button" class="hamburger-button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-icon">☰</span>
+            </button>
+            <div id="mobile-menu" class="mobile-menu-hidden">
+                <nav class="nav-links">
+                    <a href="index.html" data-lang-en="Home" data-lang-es="Inicio">Home</a>
+                    <a href="about.html" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
+                    <a href="gallery.html" data-lang-en="Photo Gallery" data-lang-es="Galería de Fotos">Photo Gallery</a>
+                    <a href="adventures.html" data-lang-en="My Adventures" data-lang-es="Mis Aventuras">My Adventures</a>
+                    <a href="funzone.html" class="active" data-lang-en="Fun Zone" data-lang-es="Zona Divertida">Fun Zone</a>
+                    <a href="favorites.html" data-lang-en="My Favorites" data-lang-es="Mis Favoritos">My Favorites</a>
+                    <a href="contact.html" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container py-12 md:py-16">
+        <div class="content-card">
+            <h1 class="card-title justify-center"><span class="icon mr-2">🎉</span><span data-lang-en="Welcome to Alex's Fun Zone!" data-lang-es="¡Bienvenido a la Zona Divertida de Alex!">Welcome to Alex's Fun Zone!</span></h1>
+            
+            <p class="text-lg text-center mt-4 mb-10" data-lang-en="Get ready for some super fun games and activities!" data-lang-es="¡Preparáte para juegos y actividades súper divertidas!">Get ready for some super fun games and activities!</p>
+
+            <!-- Section 1: Online Games -->
+            <section class="fun-section mb-12 p-6 bg-purple-50 rounded-xl shadow-lg">
+                <h2 class="text-3xl font-bold text-purple-600 mb-6 text-center" data-lang-en="Online Games 🎮" data-lang-es="Juegos en Línea 🎮">Online Games 🎮</h2>
+                <p class="text-center mb-6 text-gray-700" data-lang-en="Here are some cool games you can play online! (Ask a grown-up to help you click)" data-lang-es="¡Aquí hay algunos juegos chivas que podés jugar en línea! (Pedíle ayuda a un adulto para hacer clic)">Here are some cool games you can play online! (Ask a grown-up to help you click)</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="https://pbskids.org/games" target="_blank" class="fun-link-card bg-white hover:bg-purple-100">
+                        <img src="https://placehold.co/150x100/A78BFA/FFFFFF?text=PBS+Kids+Games&font=Inter" alt="PBS Kids Games" class="mx-auto mb-3 rounded">
+                        <h3 class="text-xl font-semibold text-purple-700" data-lang-en="PBS Kids Games" data-lang-es="Juegos de PBS Kids">PBS Kids Games</h3>
+                        <p class="text-sm text-gray-600" data-lang-en="Lots of games with your favorite characters!" data-lang-es="¡Montones de juegos con tus personajes favoritos!">Lots of games with your favorite characters!</p>
+                    </a>
+                    <a href="https://www.sesamestreet.org/games" target="_blank" class="fun-link-card bg-white hover:bg-purple-100">
+                        <img src="https://placehold.co/150x100/A78BFA/FFFFFF?text=Sesame+Street+Games&font=Inter" alt="Sesame Street Games" class="mx-auto mb-3 rounded">
+                        <h3 class="text-xl font-semibold text-purple-700" data-lang-en="Sesame Street Games" data-lang-es="Juegos de Plaza Sésamo">Sesame Street Games</h3>
+                        <p class="text-sm text-gray-600" data-lang-en="Play and learn with Elmo and friends!" data-lang-es="¡Jugá y aprendé con Elmo y sus amigos!">Play and learn with Elmo and friends!</p>
+                    </a>
+                    <a href="https://www.highlightskids.com/games" target="_blank" class="fun-link-card bg-white hover:bg-purple-100">
+                        <img src="https://placehold.co/150x100/A78BFA/FFFFFF?text=Highlights+Kids&font=Inter" alt="Highlights Kids Games" class="mx-auto mb-3 rounded">
+                        <h3 class="text-xl font-semibold text-purple-700" data-lang-en="Highlights Kids" data-lang-es="Highlights para Niños">Highlights Kids</h3>
+                        <p class="text-sm text-gray-600" data-lang-en="Fun puzzles and hidden pictures!" data-lang-es="¡Rompecabezas divertidos y dibujos escondidos!">Fun puzzles and hidden pictures!</p>
+                    </a>
+                    <a href="https://www.starfall.com/h/" target="_blank" class="fun-link-card bg-white hover:bg-purple-100">
+                        <img src="https://placehold.co/150x100/A78BFA/FFFFFF?text=Starfall&font=Inter" alt="Starfall" class="mx-auto mb-3 rounded">
+                        <h3 class="text-xl font-semibold text-purple-700" data-lang-en="Starfall" data-lang-es="Starfall">Starfall</h3>
+                        <p class="text-sm text-gray-600" data-lang-en="Learn your ABCs and numbers!" data-lang-es="¡Aprendé el abecedario y los números!">Learn your ABCs and numbers!</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Section 2: Coloring Pages -->
+            <section class="fun-section mb-12 p-6 bg-pink-50 rounded-xl shadow-lg">
+                <h2 class="text-3xl font-bold text-pink-600 mb-6 text-center" data-lang-en="Coloring Pages 🖍️" data-lang-es="Dibujos para Colorear 🖍️">Coloring Pages 🖍️</h2>
+                <p class="text-center mb-6 text-gray-700" data-lang-en="Ask a grown-up to print these for you to color!" data-lang-es="¡Pedíle a un adulto que te los imprima para colorear!">Ask a grown-up to print these for you to color!</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="#" class="fun-link-card bg-white hover:bg-pink-100" onclick="alert('Coloring page download coming soon!'); return false;">
+                        <img src="https://placehold.co/150x100/F472B6/FFFFFF?text=Soccer+Ball&font=Inter" alt="Soccer Ball Coloring Page" class="mx-auto mb-3 rounded">
+                        <h3 class="text-xl font-semibold text-pink-700" data-lang-en="Soccer Ball" data-lang-es="Bola de Fútbol">Soccer Ball</h3>
+                    </a>
+                    <a href="#" class="fun-link-card bg-white hover:bg-pink-100" onclick="alert('Coloring page download coming soon!'); return false;">
+                        <img src="https://placehold.co/150x100/F472B6/FFFFFF?text=Cute+Animal&font=Inter" alt="Animal Coloring Page" class="mx-auto mb-3 rounded">
+                        <h3 class="text-xl font-semibold text-pink-700" data-lang-en="Friendly Animal" data-lang-es="Animal Amigable">Friendly Animal</h3>
+                    </a>
+                    <a href="#" class="fun-link-card bg-white hover:bg-pink-100" onclick="alert('Coloring page download coming soon!'); return false;">
+                        <img src="https://placehold.co/150x100/F472B6/FFFFFF?text=Fun+Shapes&font=Inter" alt="Shapes Coloring Page" class="mx-auto mb-3 rounded">
+                        <h3 class="text-xl font-semibold text-pink-700" data-lang-en="Cool Shapes" data-lang-es="Formas Chivas">Cool Shapes</h3>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Section 3: Animal Sound Board -->
+            <section class="fun-section p-6 bg-teal-50 rounded-xl shadow-lg">
+                <h2 class="text-3xl font-bold text-teal-600 mb-6 text-center" data-lang-en="Animal Sound Board 🔊🦁" data-lang-es="Tablero de Sonidos de Animales 🔊🦁">Animal Sound Board 🔊🦁</h2>
+                <p class="text-center mb-6 text-gray-700" data-lang-en="Click on an animal to hear its sound! (Sounds coming very soon!)" data-lang-es="¡Hacé clic en un animal para escuchar su sonido! (¡Sonidos muy pronto!)">Click on an animal to hear its sound! (Sounds coming very soon!)</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6" id="animalSoundBoard">
+                    <div class="sound-board-item bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer text-center" data-sound="lion_roar.mp3">
+                        <img src="https://placehold.co/120x120/2DD4BF/FFFFFF?text=Lion&font=Inter" alt="Lion" class="mx-auto mb-2 rounded-md w-24 h-24 object-cover">
+                        <p class="font-semibold text-teal-700" data-lang-en="Lion" data-lang-es="León">Lion</p>
+                    </div>
+                    <div class="sound-board-item bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer text-center" data-sound="cow_moo.mp3">
+                        <img src="https://placehold.co/120x120/2DD4BF/FFFFFF?text=Cow&font=Inter" alt="Cow" class="mx-auto mb-2 rounded-md w-24 h-24 object-cover">
+                        <p class="font-semibold text-teal-700" data-lang-en="Cow" data-lang-es="Vaca">Cow</p>
+                    </div>
+                    <div class="sound-board-item bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer text-center" data-sound="dog_bark.mp3">
+                        <img src="https://placehold.co/120x120/2DD4BF/FFFFFF?text=Dog&font=Inter" alt="Dog" class="mx-auto mb-2 rounded-md w-24 h-24 object-cover">
+                        <p class="font-semibold text-teal-700" data-lang-en="Dog" data-lang-es="Perro">Dog</p>
+                    </div>
+                    <div class="sound-board-item bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer text-center" data-sound="cat_meow.mp3">
+                        <img src="https://placehold.co/120x120/2DD4BF/FFFFFF?text=Cat&font=Inter" alt="Cat" class="mx-auto mb-2 rounded-md w-24 h-24 object-cover">
+                        <p class="font-semibold text-teal-700" data-lang-en="Cat" data-lang-es="Gato">Cat</p>
+                    </div>
+                    <div class="sound-board-item bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer text-center" data-sound="sheep_baa.mp3">
+                        <img src="https://placehold.co/120x120/2DD4BF/FFFFFF?text=Sheep&font=Inter" alt="Sheep" class="mx-auto mb-2 rounded-md w-24 h-24 object-cover">
+                        <p class="font-semibold text-teal-700" data-lang-en="Sheep" data-lang-es="Oveja">Sheep</p>
+                    </div>
+                    <div class="sound-board-item bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer text-center" data-sound="horse_neigh.mp3">
+                        <img src="https://placehold.co/120x120/2DD4BF/FFFFFF?text=Horse&font=Inter" alt="Horse" class="mx-auto mb-2 rounded-md w-24 h-24 object-cover">
+                        <p class="font-semibold text-teal-700" data-lang-en="Horse" data-lang-es="Caballo">Horse</p>
+                    </div>
+                    <div class="sound-board-item bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer text-center" data-sound="duck_quack.mp3">
+                        <img src="https://placehold.co/120x120/2DD4BF/FFFFFF?text=Duck&font=Inter" alt="Duck" class="mx-auto mb-2 rounded-md w-24 h-24 object-cover">
+                        <p class="font-semibold text-teal-700" data-lang-en="Duck" data-lang-es="Pato">Duck</p>
+                    </div>
+                    <div class="sound-board-item bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer text-center" data-sound="frog_croak.mp3">
+                        <img src="https://placehold.co/120x120/2DD4BF/FFFFFF?text=Frog&font=Inter" alt="Frog" class="mx-auto mb-2 rounded-md w-24 h-24 object-cover">
+                        <p class="font-semibold text-teal-700" data-lang-en="Frog" data-lang-es="Rana">Frog</p>
+                    </div>
+                </div>
+                <audio id="soundPlayer"></audio>
+            </section>
+            
+        </div>
+    </main>
+
+
+    <footer class="main-footer">
+        <p>&copy; <span id="currentYear"></span> <span data-lang-en="Alex's Soccer World - Made with ❤️ for my Kindergarten Project" data-lang-es="El Mundo de Fútbol de Alex - Hecho con ❤️ para mi Proyecto del Kínder">Alex's Soccer World - Made with ❤️ for my Kindergarten Project</span></p>
+        <nav class="footer-nav mt-2">
+            <a href="index.html" data-lang-en="Home" data-lang-es="Inicio">Home</a>
+            <a href="about.html" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
+            <a href="gallery.html" data-lang-en="Photo Gallery" data-lang-es="Galería de Fotos">Photo Gallery</a>
+            <a href="adventures.html" data-lang-en="My Adventures" data-lang-es="Mis Aventuras">My Adventures</a>
+            <a href="funzone.html" data-lang-en="Fun Zone" data-lang-es="Zona Divertida">Fun Zone</a>
+            <a href="favorites.html" data-lang-en="My Favorites" data-lang-es="Mis Favoritos">My Favorites</a>
+            <a href="contact.html" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+            <!-- More links can go here -->
+        </nav>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll('.nav-links a, .footer-nav a').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // Animal Sound Board Logic
+        const soundBoard = document.getElementById('animalSoundBoard');
+        const soundPlayer = document.getElementById('soundPlayer');
+        if (soundBoard && soundPlayer) {
+            const soundItems = soundBoard.querySelectorAll('.sound-board-item');
+            soundItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const soundFile = item.getAttribute('data-sound');
+                    if (soundFile) {
+                        soundPlayer.src = `sounds/${soundFile}`;
+                        soundPlayer.play().catch(error => console.error("Error playing sound:", error));
+                    }
+                });
+            });
+        }
+    </script>
+    <script src="language.js" defer></script>
+</body>
+</html>

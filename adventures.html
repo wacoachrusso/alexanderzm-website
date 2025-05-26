@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-en="Alex's Adventures - My Big Explorations!" data-lang-es="Aventuras de Alex - ¡Mis Grandes Exploraciones!">Alex's Adventures - My Big Explorations!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-800">
+
+    <header class="main-nav">
+        <div class="page-container flex justify-between items-center">
+            <div class="site-title">
+                <span class="soccer-ball-logo">⚽</span>
+                <span data-lang-en="Alex's Soccer World" data-lang-es="El Mundo de Fútbol de Alex">Alex's Soccer World</span>
+            </div>
+            <div class="language-switcher" style="display: flex; align-items: center; gap: 10px;">
+                <button id="lang-en" class="language-button active-lang" data-lang-en="English" data-lang-es="Inglés">English</button>
+                <button id="lang-es" class="language-button" data-lang-en="Spanish" data-lang-es="Español">Español</button>
+            </div>
+            <button id="hamburger-button" class="hamburger-button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-icon">☰</span>
+            </button>
+            <div id="mobile-menu" class="mobile-menu-hidden">
+                <nav class="nav-links">
+                    <a href="index.html" data-lang-en="Home" data-lang-es="Inicio">Home</a>
+                    <a href="about.html" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
+                    <a href="gallery.html" data-lang-en="Photo Gallery" data-lang-es="Galería de Fotos">Photo Gallery</a>
+                    <a href="adventures.html" class="active" data-lang-en="My Adventures" data-lang-es="Mis Aventuras">My Adventures</a>
+                    <a href="funzone.html" data-lang-en="Fun Zone" data-lang-es="Zona Divertida">Fun Zone</a>
+                    <a href="favorites.html" data-lang-en="My Favorites" data-lang-es="Mis Favoritos">My Favorites</a>
+                    <a href="contact.html" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container py-12 md:py-16">
+        <div class="content-card">
+            <h1 class="card-title justify-center"><span class="icon mr-2">🚀</span><span data-lang-en="My Awesome Adventures!" data-lang-es="¡Mis Aventuras Asombrosas!">My Awesome Adventures!</span></h1>
+            
+            <p class="text-lg text-center mt-4 mb-10" data-lang-en="Come see all the cool things I've been up to!" data-lang-es="¡Vení a ver todas las cosas chivas que he estado haciendo!">Come see all the cool things I've been up to!</p>
+
+            <!-- Adventure 1 -->
+            <div class="adventure-entry mb-12 p-6 bg-sky-50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <h2 class="text-3xl font-bold text-sky-600 mb-4" data-lang-en="My Trip to the Zoo! 🦁🐯🐻" data-lang-es="¡Mi Viaje al Zoológico! 🦁🐯🐻">My Trip to the Zoo! 🦁🐯🐻</h2>
+                <div class="grid md:grid-cols-2 gap-6 items-center">
+                    <img src="https://placehold.co/500x350/67E8F9/0891B2?text=Zoo+Adventure!&font=Inter" alt="Alex at the zoo" class="rounded-lg shadow-md w-full object-cover aspect-video">
+                    <div>
+                        <p class="text-lg mb-3" data-lang-en="Last week, I went to the zoo with my family! It was SO much fun. I saw a giant elephant, a stripy tiger, and a sleepy bear. My favorite was the monkey exhibit – they were swinging everywhere!" data-lang-es="¡La semana pasada fui al zoológico con mi familia! Estuvo TUANIS. Vi un elefante gigante, un tigre rayado y un oso dormilón. Mi parte favorita fue la de los monos – ¡andaban guindando por todo lado!">Last week, I went to the zoo with my family! It was SO much fun. I saw a giant elephant, a stripy tiger, and a sleepy bear. My favorite was the monkey exhibit – they were swinging everywhere!</p>
+                        <p class="text-md text-sky-700 font-semibold" data-lang-en="Date of Adventure: May 18, 2025" data-lang-es="Fecha de la Aventura: 18 de mayo, 2025">Date of Adventure: May 18, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Adventure 2 -->
+            <div class="adventure-entry mb-12 p-6 bg-lime-50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <h2 class="text-3xl font-bold text-lime-600 mb-4" data-lang-en="Learning to Ride My Bike! 🚲💨" data-lang-es="¡Aprendiendo a Andar en Bici! 🚲💨">Learning to Ride My Bike! 🚲💨</h2>
+                <div class="grid md:grid-cols-2 gap-6 items-center">
+                    <img src="https://placehold.co/500x350/A3E635/4D7C0F?text=Bike+Riding+Pro!&font=Inter" alt="Alex riding a bike" class="rounded-lg shadow-md w-full object-cover aspect-video">
+                    <div>
+                        <p class="text-lg mb-3" data-lang-en="Guess what? I'm learning to ride my bike without training wheels! It was a little wobbly at first, but now I can go super fast. Vroom vroom!" data-lang-es="¿Adiviná qué? ¡Estoy aprendiendo a andar en bici sin rueditas! Al principio me tambaleaba un poco, pero ahora puedo ir súper rápido. ¡Vrum vrum!">Guess what? I'm learning to ride my bike without training wheels! It was a little wobbly at first, but now I can go super fast. Vroom vroom!</p>
+                        <p class="text-md text-lime-700 font-semibold" data-lang-en="Date of Adventure: May 10, 2025" data-lang-es="Fecha de la Aventura: 10 de mayo, 2025">Date of Adventure: May 10, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Adventure 3 -->
+            <div class="adventure-entry p-6 bg-amber-50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <h2 class="text-3xl font-bold text-amber-600 mb-4" data-lang-en="Building a GIANT Sandcastle! 🏰🏖️" data-lang-es="¡Construyendo un Castillo de Arena GIGANTE! 🏰🏖️">Building a GIANT Sandcastle! 🏰🏖️</h2>
+                <div class="grid md:grid-cols-2 gap-6 items-center">
+                    <img src="https://placehold.co/500x350/FCD34D/B45309?text=Sandcastle+Master!&font=Inter" alt="Alex building a sandcastle" class="rounded-lg shadow-md w-full object-cover aspect-video">
+                    <div>
+                        <p class="text-lg mb-3" data-lang-en="We went to the beach and I built the BIGGEST sandcastle ever! It had tall towers and a moat. A little crab tried to move in, but I told him it was my castle." data-lang-es="¡Fuimos a la playa y construí el castillo de arena MÁS GRANDE del mundo! Tenía torres altas y un foso. Un cangrejito intentó meterse, pero le dije que era mi castillo.">We went to the beach and I built the BIGGEST sandcastle ever! It had tall towers and a moat. A little crab tried to move in, but I told him it was my castle.</p>
+                        <p class="text-md text-amber-700 font-semibold" data-lang-en="Date of Adventure: April 28, 2025" data-lang-es="Fecha de la Aventura: 28 de abril, 2025">Date of Adventure: April 28, 2025</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add more adventure entries as needed -->
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; <span id="currentYear"></span> <span data-lang-en="Alex's Soccer World - Made with ❤️ for my Kindergarten Project" data-lang-es="El Mundo de Fútbol de Alex - Hecho con ❤️ para mi Proyecto del Kínder">Alex's Soccer World - Made with ❤️ for my Kindergarten Project</span></p>
+        <nav class="footer-nav mt-2">
+            <a href="index.html" data-lang-en="Home" data-lang-es="Inicio">Home</a>
+            <a href="about.html" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
+            <a href="gallery.html" data-lang-en="Photo Gallery" data-lang-es="Galería de Fotos">Photo Gallery</a>
+            <a href="adventures.html" data-lang-en="My Adventures" data-lang-es="Mis Aventuras">My Adventures</a>
+            <a href="funzone.html" data-lang-en="Fun Zone" data-lang-es="Zona Divertida">Fun Zone</a>
+            <a href="favorites.html" data-lang-en="My Favorites" data-lang-es="Mis Favoritos">My Favorites</a>
+            <a href="contact.html" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+            <!-- More links can go here -->
+        </nav>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll('.nav-links a, .footer-nav a').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    </script>
+    <script src="language.js" defer></script>
+</body>
+</html>

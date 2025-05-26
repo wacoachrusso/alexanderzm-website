@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-en="Alex's Favorite Things - All My Faves!" data-lang-es="Las Cosas Favoritas de Alex - ¡Todos Mis Favoritos!">Alex's Favorite Things - All My Faves!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-800">
+
+    <header class="main-nav">
+        <div class="page-container flex justify-between items-center">
+            <div class="site-title">
+                <span class="soccer-ball-logo">⚽</span>
+                <span data-lang-en="Alex's Soccer World" data-lang-es="El Mundo de Fútbol de Alex">Alex's Soccer World</span>
+            </div>
+            <div class="language-switcher" style="display: flex; align-items: center; gap: 10px;">
+                <button id="lang-en" class="language-button active-lang" data-lang-en="English" data-lang-es="Inglés">English</button>
+                <button id="lang-es" class="language-button" data-lang-en="Spanish" data-lang-es="Español">Español</button>
+            </div>
+            <button id="hamburger-button" class="hamburger-button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-icon">☰</span>
+            </button>
+            <div id="mobile-menu" class="mobile-menu-hidden">
+                <nav class="nav-links">
+                    <a href="index.html" data-lang-en="Home" data-lang-es="Inicio">Home</a>
+                    <a href="about.html" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
+                    <a href="gallery.html" data-lang-en="Photo Gallery" data-lang-es="Galería de Fotos">Photo Gallery</a>
+                    <a href="adventures.html" data-lang-en="My Adventures" data-lang-es="Mis Aventuras">My Adventures</a>
+                    <a href="funzone.html" data-lang-en="Fun Zone" data-lang-es="Zona Divertida">Fun Zone</a>
+                    <a href="favorites.html" class="active" data-lang-en="My Favorites" data-lang-es="Mis Favoritos">My Favorites</a>
+                    <a href="contact.html" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container py-12 md:py-16">
+        <div class="content-card">
+            <h1 class="card-title justify-center"><span class="icon mr-2">💖</span><span data-lang-en="All My Favorite Things!" data-lang-es="¡Todas Mis Cosas Favoritas!">All My Favorite Things!</span></h1>
+            
+            <p class="text-lg text-center mt-4 mb-10" data-lang-en="Want to know what I like the most? Check it out!" data-lang-es="¿Querés saber qué me gusta más? ¡Mirá!">Want to know what I like the most? Check it out!</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Favorite Color -->
+                <div class="favorite-item p-6 bg-red-100 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-6xl mb-3">🎨</div>
+                    <h2 class="text-2xl font-bold text-red-600 mb-2" data-lang-en="My Favorite Color" data-lang-es="Mi Color Favorito">My Favorite Color</h2>
+                    <p class="text-xl text-red-700 font-semibold" data-lang-en="Bright Red!" data-lang-es="¡Rojo Brillante!">Bright Red!</p>
+                    <p class="text-sm text-gray-600 mt-1" data-lang-en="(Like my best soccer jersey!)" data-lang-es="(¡Como mi mejor camisa de fútbol!)">(Like my best soccer jersey!)</p>
+                </div>
+
+                <!-- Favorite Animal -->
+                <div class="favorite-item p-6 bg-blue-100 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-6xl mb-3">🐶</div>
+                    <h2 class="text-2xl font-bold text-blue-600 mb-2" data-lang-en="My Favorite Animal" data-lang-es="Mi Animal Favorito">My Favorite Animal</h2>
+                    <p class="text-xl text-blue-700 font-semibold" data-lang-en="Puppies!" data-lang-es="¡Los Perritos!">Puppies!</p>
+                    <p class="text-sm text-gray-600 mt-1" data-lang-en="(They are so fluffy and playful!)" data-lang-es="(¡Son tan peluditos y juguetones!)">(They are so fluffy and playful!)</p>
+                </div>
+
+                <!-- Favorite Food -->
+                <div class="favorite-item p-6 bg-yellow-100 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-6xl mb-3">🍕</div>
+                    <h2 class="text-2xl font-bold text-yellow-600 mb-2" data-lang-en="My Favorite Food" data-lang-es="Mi Comida Favorita">My Favorite Food</h2>
+                    <p class="text-xl text-yellow-700 font-semibold" data-lang-en="Pizza!" data-lang-es="¡Pizza!">Pizza!</p>
+                    <p class="text-sm text-gray-600 mt-1" data-lang-en="(Especially with extra cheese!)" data-lang-es="(¡Especialmente con extra queso!)">(Especially with extra cheese!)</p>
+                </div>
+
+                <!-- Favorite Toy -->
+                <div class="favorite-item p-6 bg-green-100 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-6xl mb-3">⚽</div>
+                    <h2 class="text-2xl font-bold text-green-600 mb-2" data-lang-en="My Favorite Toy" data-lang-es="Mi Juguete Favorito">My Favorite Toy</h2>
+                    <p class="text-xl text-green-700 font-semibold" data-lang-en="My Soccer Ball!" data-lang-es="¡Mi Bola de Fútbol!">My Soccer Ball!</p>
+                    <p class="text-sm text-gray-600 mt-1" data-lang-en="(I can play with it all day!)" data-lang-es="(¡Puedo jugar con ella todo el día!)">(I can play with it all day!)</p>
+                </div>
+
+                <!-- Favorite Cartoon -->
+                <div class="favorite-item p-6 bg-purple-100 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-6xl mb-3">📺</div>
+                    <h2 class="text-2xl font-bold text-purple-600 mb-2" data-lang-en="My Favorite Cartoon" data-lang-es="Mi Caricatura Favorita">My Favorite Cartoon</h2>
+                    <p class="text-xl text-purple-700 font-semibold" data-lang-en="Paw Patrol!" data-lang-es="¡Paw Patrol!">Paw Patrol!</p>
+                    <p class="text-sm text-gray-600 mt-1" data-lang-en="(Ryder and the pups are the best!)" data-lang-es="(¡Ryder y los cachorros son lo máximo!)">(Ryder and the pups are the best!)</p>
+                </div>
+
+                <!-- Favorite Activity -->
+                <div class="favorite-item p-6 bg-indigo-100 rounded-xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-6xl mb-3">🏞️</div>
+                    <h2 class="text-2xl font-bold text-indigo-600 mb-2" data-lang-en="My Favorite Activity" data-lang-es="Mi Actividad Favorita">My Favorite Activity</h2>
+                    <p class="text-xl text-indigo-700 font-semibold" data-lang-en="Playing Outside!" data-lang-es="¡Jugar Afuera!">Playing Outside!</p>
+                    <p class="text-sm text-gray-600 mt-1" data-lang-en="(Running, jumping, and exploring!)" data-lang-es="(¡Correr, saltar y explorar!)">(Running, jumping, and exploring!)</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; <span id="currentYear"></span> <span data-lang-en="Alex's Soccer World - Made with ❤️ for my Kindergarten Project" data-lang-es="El Mundo de Fútbol de Alex - Hecho con ❤️ para mi Proyecto del Kínder">Alex's Soccer World - Made with ❤️ for my Kindergarten Project</span></p>
+        <nav class="footer-nav mt-2">
+            <a href="index.html" data-lang-en="Home" data-lang-es="Inicio">Home</a>
+            <a href="about.html" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
+            <a href="gallery.html" data-lang-en="Photo Gallery" data-lang-es="Galería de Fotos">Photo Gallery</a>
+            <a href="adventures.html" data-lang-en="My Adventures" data-lang-es="Mis Aventuras">My Adventures</a>
+            <a href="funzone.html" data-lang-en="Fun Zone" data-lang-es="Zona Divertida">Fun Zone</a>
+            <a href="favorites.html" data-lang-en="My Favorites" data-lang-es="Mis Favoritos">My Favorites</a>
+            <a href="contact.html" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+        </nav>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll('.nav-links a, .footer-nav a').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    </script>
+    <script src="language.js" defer></script>
+</body>
+</html>

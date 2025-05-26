@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Zamora Morales - Future Soccer Star!</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Keep Tailwind for utility classes if needed -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link to our new custom stylesheet -->
+</head>
+<body class="text-gray-800">
+
+    <header class="main-nav">
+        <div class="page-container flex justify-between items-center">
+            <div class="site-title">
+                <span class="soccer-ball-logo">⚽</span>
+                <span data-lang-en="Alex's Soccer World" data-lang-es="El Mundo Futbolero de Alex">Alex's Soccer World</span>
+            </div>
+            <div class="language-switcher" style="display: flex; align-items: center; gap: 10px;">
+                <button id="lang-en" class="language-button active-lang">English</button>
+                <button id="lang-es" class="language-button">Español</button>
+            </div>
+            <button id="hamburger-button" class="hamburger-button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-icon">☰</span>
+            </button>
+            <div id="mobile-menu" class="mobile-menu-hidden">
+                <nav class="nav-links">
+                    <a href="index.html" class="active" data-lang-en="Home" data-lang-es="Inicio">Home</a>
+                    <a href="about.html" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
+                    <a href="gallery.html" data-lang-en="Photo Gallery" data-lang-es="Galería de Fotos">Photo Gallery</a>
+                    <a href="adventures.html" data-lang-en="My Adventures" data-lang-es="Mis Aventuras">My Adventures</a>
+                    <a href="funzone.html" data-lang-en="Fun Zone" data-lang-es="Zona Divertida">Fun Zone</a>
+                    <a href="favorites.html" data-lang-en="My Favorites" data-lang-es="Mis Favoritos">My Favorites</a>
+                    <a href="contact.html" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+                    <!-- Add more links here as we create pages -->
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section-premium">
+        <div class="hero-content">
+            <h1 class="hero-title" data-lang-en="Alex Zamora Morales" data-lang-es="Alex Zamora Morales">Alex Zamora Morales</h1>
+            <p class="hero-subtitle" data-lang-en="Future Soccer Superstar!" data-lang-es="¡Futura Superestrella del Fútbol!">Future Soccer Superstar! <span style="color: #facc15;">⭐</span></p>
+            <a href="#about-alex" class="hero-button"><span data-lang-en="Meet Alex!" data-lang-es="¡Conoce a Alex!">Meet Alex!</span> <span class="ml-1">👇</span></a>
+        </div>
+    </section>
+
+    <main class="page-container py-12 md:py-16">
+        <section class="kindergarten-banner">
+            <p data-lang-en="👋 Hi everyone! This is Alex, and this website is part of my Kindergarten project today! I hope you like it! 🎉" data-lang-es="👋 ¡Hola a todos! ¡Soy Alex, y este sitio web es parte de mi proyecto del Kínder hoy! ¡Espero que les guste! 🎉">👋 Hi everyone! This is Alex, and this website is part of my Kindergarten project today! I hope you like it! 🎉</p>
+        </section>
+
+        <section id="about-alex" class="mb-16">
+            <div class="content-card text-center">
+                <img src="https://res.cloudinary.com/dcuwsbzv5/image/upload/e_improve,w_300,h_300,c_thumb,g_auto,r_max/v1748266984/IMG-20250320-WA0001_iu1jz0.jpg"
+                     alt="This is Alex! Photo for his Kindergarten Project"
+                     class="w-48 h-48 md:w-64 md:h-64 rounded-full mx-auto mb-6 shadow-xl border-4 border-yellow-400 object-cover"
+                     onerror="this.src='https://placehold.co/300x300/34D399/FFFFFF?text=Alex!&font=Inter'; this.onerror=null;">
+                <h2 class="card-title justify-center" data-lang-en="Meet Alex!" data-lang-es="¡Conocé a Alex!"><span class="icon mr-2">👤</span>Meet Alex!</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    <span data-lang-en="Alex is a super energetic and happy kid who absolutely LOVES soccer!" data-lang-es="¡Alex es un niño súper enérgico y feliz al que le ENCANTA el fútbol!">Alex is a super energetic and happy kid who absolutely LOVES soccer!</span>
+                    <span data-lang-en="Every day is a new adventure on the field (or in the backyard!) for him." data-lang-es="¡Para él, cada día es una nueva aventura en la cancha (o en el patio!)">Every day is a new adventure on the field (or in the backyard!) for him.</span>
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    <span data-lang-en="He dreams of wearing a cool jersey, hearing the crowd cheer, and scoring the winning GOAL!" data-lang-es="¡Sueña con usar una camiseta chiva, escuchar a la gente gritar y meter el GOL ganador!">He dreams of wearing a cool jersey, hearing the crowd cheer, and scoring the winning GOAL!</span>
+                    <span data-lang-en="With his passion and practice, he's on his way to becoming a soccer legend!" data-lang-es="¡Con su pasión y práctica, va camino a convertirse en una leyenda del fútbol!">With his passion and practice, he's on his way to becoming a soccer legend!</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-green-700 mb-10" data-lang-en="Alex's Awesome Soccer Skills!" data-lang-es="¡Las Habilidades Futboleras Asombrosas de Alex!">Alex's Awesome Soccer Skills!</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="content-card text-center">
+                    <div class="text-6xl mb-4 text-yellow-500">👟</div>
+                    <h3 class="card-title justify-center text-2xl" data-lang-en="Super Speed" data-lang-es="Súper Velocidad"><span class="icon hidden"></span>Super Speed</h3>
+                    <p class="text-gray-600" data-lang-en="Alex can run super fast, zooming past everyone on his way to the goal!" data-lang-es="¡Alex puede correr súper rápido, pasando a todos zumbando camino al gol!">Alex can run super fast, zooming past everyone on his way to the goal!</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="text-6xl mb-4 text-yellow-500">🎯</div>
+                    <h3 class="card-title justify-center text-2xl" data-lang-en="Powerful Kicks" data-lang-es="Patadas Poderosas"><span class="icon hidden"></span>Powerful Kicks</h3>
+                    <p class="text-gray-600" data-lang-en="He has a mighty kick! The ball flies when Alex strikes it. GOOOAL!" data-lang-es="¡Tiene una patada fuertísima! La bola vuela cuando Alex le pega. ¡GOOOOL!">He has a mighty kick! The ball flies when Alex strikes it. GOOOAL!</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="text-6xl mb-4 text-yellow-500">😄</div>
+                    <h3 class="card-title justify-center text-2xl" data-lang-en="Team Player" data-lang-es="Compa de Equipo"><span class="icon hidden"></span>Team Player</h3>
+                    <p class="text-gray-600" data-lang-en="Alex loves playing with friends and always has a big smile on the field!" data-lang-es="¡A Alex le encanta jugar con sus compas y siempre tiene una gran sonrisa en la cancha!">Alex loves playing with friends and always has a big smile on the field!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-green-700 mb-10" data-lang-en="Alex's Awesome Soccer Skills!" data-lang-es="¡Las Habilidades Futboleras Asombrosas de Alex!">Alex's Awesome Soccer Skills!</h2>
+            <div class="grid md:grid-cols-4 gap-4 text-center text-white text-3xl font-bold">
+                <div class="bg-yellow-400 p-10 rounded-lg shadow-md hover:bg-yellow-500 transition-colors hero-button"><span data-lang-en="Goal!" data-lang-es="¡Gol!">Goal!</span></div>
+                <div class="bg-green-400 p-10 rounded-lg shadow-md hover:bg-green-500 transition-colors hero-button"><span data-lang-en="Save!" data-lang-es="¡Atajada!">Save!</span></div>
+                <div class="bg-blue-400 p-10 rounded-lg shadow-md hover:bg-blue-500 transition-colors hero-button"><span data-lang-en="Team!" data-lang-es="¡Equipo!">Team!</span></div>
+                <div class="bg-pink-400 p-10 rounded-lg shadow-md hover:bg-pink-500 transition-colors hero-button"><span data-lang-en="Victory!" data-lang-es="¡Victoria!">Victory!</span></div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <div class="content-card">
+                <h2 class="card-title" data-lang-en="Alex's Soccer Adventures!" data-lang-es="¡Las Aventuras Futboleras de Alex!"><span class="icon">🏞️</span>Alex's Soccer Adventures!</h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    <span data-lang-en="Imagine all the fun Alex has playing soccer! Here are some placeholder spots for his amazing action shots." data-lang-es="¡Imaginate toda la diversión que tiene Alex jugando fútbol! Aquí hay algunos espacios para sus fotos de acción increíbles.">Imagine all the fun Alex has playing soccer! Here are some placeholder spots for his amazing action shots.</span>
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <img src="https://placehold.co/200x200/FBBF24/FFFFFF?text=Goal!&font=Inter" alt="Soccer action placeholder 1" class="rounded-lg shadow-md w-full h-auto object-cover aspect-square" onerror="this.src='https://placehold.co/200x200/FBBF24/FFFFFF?text=Pic+1&font=Inter'; this.onerror=null;">
+                    <img src="https://placehold.co/200x200/34D399/FFFFFF?text=Save!&font=Inter" alt="Soccer action placeholder 2" class="rounded-lg shadow-md w-full h-auto object-cover aspect-square" onerror="this.src='https://placehold.co/200x200/34D399/FFFFFF?text=Pic+2&font=Inter'; this.onerror=null;">
+                    <img src="https://placehold.co/200x200/A78BFA/FFFFFF?text=Team!&font=Inter" alt="Soccer action placeholder 3" class="rounded-lg shadow-md w-full h-auto object-cover aspect-square" onerror="this.src='https://placehold.co/200x200/A78BFA/FFFFFF?text=Pic+3&font=Inter'; this.onerror=null;">
+                    <img src="https://placehold.co/200x200/F472B6/FFFFFF?text=Victory!&font=Inter" alt="Soccer action placeholder 4" class="rounded-lg shadow-md w-full h-auto object-cover aspect-square hidden sm:block" onerror="this.src='https://placehold.co/200x200/F472B6/FFFFFF?text=Pic+4&font=Inter'; this.onerror=null;">
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center py-10">
+             <div class="content-card">
+                <h2 class="card-title justify-center text-3xl md:text-4xl" data-lang-en="Go Alex Go!" data-lang-es="¡Vamos Alex, Vamos!"><span class="icon" style="color: #facc15;">🌟</span>Go Alex Go!<span class="icon" style="color: #facc15;">🌟</span></h2>
+                <p class="text-xl text-gray-700 my-8" data-lang-en="We're all cheering for you, Alex! Keep playing, keep dreaming, and have lots of fun!" data-lang-es="¡Todos te apoyamos, Alex! ¡Seguí jugando, seguí soñando y divertite un montón, pura vida!">We're all cheering for you, Alex! Keep playing, keep dreaming, and have lots of fun!</p>
+                <div class="text-8xl text-green-600" style="animation: bounce 2s infinite ease-in-out;">⚽</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; <span id="currentYear"></span> <span data-lang-en="Alex's Soccer World - Made with ❤️ for my Kindergarten Project" data-lang-es="El Mundo Futbolero de Alex - Hecho con ❤️ para mi Proyecto del Kínder">Alex's Soccer World - Made with ❤️ for my Kindergarten Project</span></p>
+        <nav class="footer-nav mt-2">
+            <a href="index.html" data-lang-en="Home" data-lang-es="Inicio">Home</a>
+            <a href="about.html" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
+            <a href="gallery.html" data-lang-en="Photo Gallery" data-lang-es="Galería de Fotos">Photo Gallery</a>
+            <a href="adventures.html" data-lang-en="My Adventures" data-lang-es="Mis Aventuras">My Adventures</a>
+            <a href="funzone.html" data-lang-en="Fun Zone" data-lang-es="Zona Divertida">Fun Zone</a>
+            <a href="favorites.html" data-lang-en="My Favorites" data-lang-es="Mis Favoritos">My Favorites</a>
+            <a href="contact.html" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+            <!-- More links can go here -->
+        </nav>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Simple smooth scroll for the anchor link
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add 'active' class to current page link in nav
+        // This is a simple version, might need adjustment if URLs get more complex
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.getAttribute('href') === currentPage || (currentPage === '' && link.getAttribute('href') === 'index.html')) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active'); // Ensure other links are not active
+            }
+        });
+         // For the footer as well, if you have similar nav there
+        document.querySelectorAll('.footer-nav a').forEach(link => {
+            if (link.getAttribute('href') === currentPage || (currentPage === '' && link.getAttribute('href') === 'index.html')) {
+                // You might want a different 'active' style for footer, or none
+                // link.classList.add('active-footer'); 
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="language.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-en="Contact Alex - Say Hello!" data-lang-es="Contacta a Alex - ¡Decí Hola!">Contact Alex - Say Hello!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-800">
+
+    <header class="main-nav">
+        <div class="page-container flex justify-between items-center">
+            <div class="site-title">
+                <span class="soccer-ball-logo">⚽</span>
+                <span data-lang-en="Alex's Soccer World" data-lang-es="El Mundo de Fútbol de Alex">Alex's Soccer World</span>
+            </div>
+            <div class="language-switcher" style="display: flex; align-items: center; gap: 10px;"> <!-- Removed margin-left: auto and margin-right -->
+                <button id="lang-en" class="language-button active-lang">English</button>
+                <button id="lang-es" class="language-button">Español</button>
+            </div>
+            <button id="hamburger-button" class="hamburger-button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-icon">☰</span>
+            </button>
+            <div id="mobile-menu" class="mobile-menu-hidden">
+                <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="gallery.html">Photo Gallery</a>
+                <a href="adventures.html">My Adventures</a>
+                <a href="funzone.html">Fun Zone</a>
+                <a href="favorites.html">My Favorites</a>
+                <a href="contact.html" class="active" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container py-12 md:py-16">
+        <div class="content-card text-center">
+            <h1 class="card-title justify-center"><span class="icon mr-2">💌</span><span data-lang-en="Say Hello to Alex!" data-lang-es="¡Decíle Hola a Alex!">Say Hello to Alex!</span></h1>
+            
+            <img src="https://placehold.co/300x200/818CF8/FFFFFF?text=Friendly+Mailbox!&font=Inter" alt="Friendly Mailbox" class="mx-auto my-8 rounded-lg shadow-lg">
+
+            <p class="text-xl mt-4 mb-6 text-gray-700">
+                <span data-lang-en="Alex loves to hear from friends and family!" data-lang-es="¡A Alex le encanta saber de sus amigos y familia!">Alex loves to hear from friends and family!</span>
+            </p>
+            <p class="text-lg mb-4">
+                <span data-lang-en="If you'd like to send Alex a message, a drawing, or a virtual high-five, please ask a grown-up to help you get in touch with Alex's mother." data-lang-es="Si querés enviarle un mensaje, un dibujo o un choque de manos virtual a Alex, pedíle ayuda a un adulto para que te ponga en contacto con la mamá de Alex.">If you'd like to send Alex a message, a drawing, or a virtual high-five, please ask a grown-up to help you get in touch with Alex's mother.</span>
+            </p>
+            <p class="text-lg mb-8">
+                <span data-lang-en="She'll make sure Alex gets your wonderful message!" data-lang-es="¡Ella se asegurará de que Alex reciba tu maravilloso mensaje!">She'll make sure Alex gets your wonderful message!</span>
+            </p>
+
+            <div class="contact-icons flex justify-center space-x-8 text-5xl text-indigo-500 mt-10">
+                <span>👋</span> <!-- Waving hand -->
+                <span>🎨</span> <!-- Artist palette for drawings -->
+                <span>🌟</span> <!-- Star for positive messages -->
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; <span id="currentYear"></span> <span data-lang-en="Alex's Soccer World - Made with ❤️ for my Kindergarten Project" data-lang-es="El Mundo de Fútbol de Alex - Hecho con ❤️ para mi Proyecto del Kínder">Alex's Soccer World - Made with ❤️ for my Kindergarten Project</span></p>
+        <nav class="footer-nav mt-2">
+            <a href="index.html" data-lang-en="Home" data-lang-es="Inicio">Home</a>
+            <a href="about.html" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
+            <a href="gallery.html" data-lang-en="Photo Gallery" data-lang-es="Galería de Fotos">Photo Gallery</a>
+            <a href="adventures.html" data-lang-en="My Adventures" data-lang-es="Mis Aventuras">My Adventures</a>
+            <a href="funzone.html" data-lang-en="Fun Zone" data-lang-es="Zona Divertida">Fun Zone</a>
+            <a href="favorites.html" data-lang-en="My Favorites" data-lang-es="Mis Favoritos">My Favorites</a>
+            <a href="contact.html" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+        </nav>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll('.nav-links a, .footer-nav a').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    </script>
+    <script src="language.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-en="About Alex - Future Soccer Star" data-lang-es="Sobre Alex - Futura Estrella de Fútbol">About Alex - Future Soccer Star</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Keep Tailwind for utility classes if needed -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link to our new custom stylesheet -->
+</head>
+<body class="text-gray-800">
+
+    <header class="main-nav">
+        <div class="page-container flex justify-between items-center">
+            <div class="site-title">
+                <span class="soccer-ball-logo">⚽</span>
+                <span data-lang-en="Alex's Soccer World" data-lang-es="El Mundo de Fútbol de Alex">Alex's Soccer World</span>
+            </div>
+            <div class="language-switcher" style="display: flex; align-items: center; gap: 10px;">
+                <button id="lang-en" class="language-button active-lang" data-lang-en="English" data-lang-es="Inglés">English</button>
+                <button id="lang-es" class="language-button" data-lang-en="Spanish" data-lang-es="Español">Español</button>
+            </div>
+            <button id="hamburger-button" class="hamburger-button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-icon">☰</span>
+            </button>
+            <div id="mobile-menu" class="mobile-menu-hidden">
+                <nav class="nav-links">
+                    <a href="index.html" data-lang-en="Home" data-lang-es="Inicio">Home</a>
+                    <a href="about.html" class="active" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
+                    <a href="gallery.html" data-lang-en="Photo Gallery" data-lang-es="Galería de Fotos">Photo Gallery</a>
+                    <a href="adventures.html" data-lang-en="My Adventures" data-lang-es="Mis Aventuras">My Adventures</a>
+                    <a href="funzone.html" data-lang-en="Fun Zone" data-lang-es="Zona Divertida">Fun Zone</a>
+                    <a href="favorites.html" data-lang-en="My Favorites" data-lang-es="Mis Favoritos">My Favorites</a>
+                    <a href="contact.html" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container py-12 md:py-16">
+        <div class="content-card">
+            <h1 class="card-title justify-center"><span class="icon mr-2">🌟</span><span data-lang-en="About Alex" data-lang-es="Sobre Alex">About Alex</span></h1>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center mt-8">
+                <div>
+                    <h2 class="text-2xl font-bold text-green-600 mb-4" data-lang-en="Hi, I'm Alex! 👋" data-lang-es="¡Hola, soy Alex! 👋">Hi, I'm Alex! 👋</h2>
+                    <p class="text-lg mb-4" data-lang-en="I'm 4 years old and I LOVE soccer more than anything in the world! ⚽" data-lang-es="¡Tengo 4 años y AMO el fútbol más que nada en el mundo! ⚽">I'm 4 years old and I LOVE soccer more than anything in the world! ⚽</p>
+                    <p class="mb-4 text-lg" data-lang-en="When I'm not scoring goals, you can find me:" data-lang-es="Cuando no estoy metiendo goles, me podés encontrar:">When I'm not scoring goals, you can find me:</p>
+                    <ul class="list-disc list-inside text-lg space-y-2 mb-6 bg-green-50 p-4 rounded-lg shadow-sm">
+                        <li data-lang-en="Practicing my kicks in the backyard" data-lang-es="Practicando mis remates en el patio">Practicing my kicks in the backyard</li>
+                        <li data-lang-en="Watching soccer games with my family" data-lang-es="Viendo mejengas con mi familia">Watching soccer games with my family</li>
+                        <li data-lang-en="Playing with my soccer ball collection" data-lang-es="Jugando con mi colección de bolas">Playing with my soccer ball collection</li>
+                        <li data-lang-en="Dreaming of becoming a famous soccer player" data-lang-es="Soñando con ser un futbolista famoso">Dreaming of becoming a famous soccer player</li>
+                    </ul>
+                    <p class="text-gray-700 text-md italic" data-lang-en="This is my very first website, created as part of my Kindergarten project. I hope you like it!" data-lang-es="Este es mi primer sitio web, creado como parte de mi proyecto del Kínder. ¡Espero que te guste!">This is my very first website, created as part of my Kindergarten project. I hope you like it!</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://res.cloudinary.com/dcuwsbzv5/image/upload/e_improve,w_300,h_400,c_thumb,g_auto/v1748266984/IMG-20250320-WA0001_iu1jz0.jpg" 
+                         alt="Alex smiling with a soccer ball"
+                         class="rounded-xl shadow-lg mx-auto w-full max-w-xs border-4 border-yellow-400 object-cover aspect-[3/4]"
+                         onerror="this.src='https://placehold.co/300x400/34D399/FFFFFF?text=Alex%27s+Photo&font=Inter'; this.onerror=null;">
+                    <p class="mt-4 text-sm text-gray-600" data-lang-en="Me with my favorite soccer ball!" data-lang-es="¡Yo con mi bola de fútbol favorita!">Me with my favorite soccer ball!</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <h3 class="card-title"><span class="icon">🏆</span><span data-lang-en="My Soccer Journey" data-lang-es="Mi Trayectoria Futbolística">My Soccer Journey</span></h3>
+                <p class="text-lg mb-3" data-lang-en="I started playing soccer when I was just 3 years old, and I've been in love with the game ever since. My favorite player is Lionel Messi because of his amazing skills and sportsmanship." data-lang-es="Empecé a jugar fútbol cuando solo tenía 3 años, y desde entonces estoy enamorado del juego. Mi jugador favorito es Lionel Messi por sus habilidades increíbles y su deportividad.">I started playing soccer when I was just 3 years old, and I've been in love with the game ever since. My favorite player is Lionel Messi because of his amazing skills and sportsmanship.</p>
+                <p class="text-lg" data-lang-en="One day, I hope to play for FC Barcelona or the Mexican National Team!" data-lang-es="¡Algún día, espero jugar para el FC Barcelona o la Selección Mexicana!">One day, I hope to play for FC Barcelona or the Mexican National Team!</p>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="index.html" class="hero-button" style="background-color: #34d399; color: white;">
+                    <span data-lang-en="← Back to Home" data-lang-es="← Volver al Inicio">← Back to Home</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Fun Facts Section -->
+        <div class="content-card mt-12">
+            <h2 class="card-title justify-center"><span class="icon mr-2">🤩</span><span data-lang-en="Fun Facts About Alex!" data-lang-es="¡Datos Curiosos Sobre Alex!">Fun Facts About Alex!</span></h2>
+            <div class="mt-6 space-y-4">
+                <div class="fun-fact p-4 bg-sky-100 rounded-lg shadow hover:shadow-md transition-shadow">
+                    <button class="fun-fact-question font-semibold text-sky-700 w-full text-left flex justify-between items-center">
+                        <span data-lang-en="What's Alex's favorite animal?" data-lang-es="¿Cuál es el animal favorito de Alex?">What's Alex's favorite animal?</span>
+                        <span class="arrow text-xl">&#9654;</span> <!-- Right-pointing triangle -->
+                    </button>
+                    <p class="fun-fact-answer is-collapsed mt-2 text-gray-700 pl-4" data-lang-en="Alex loves lions! Roar! 🦁" data-lang-es="¡A Alex le encantan los leones! ¡Roar! 🦁">Alex loves lions! Roar! 🦁</p>
+                </div>
+                <div class="fun-fact p-4 bg-pink-100 rounded-lg shadow hover:shadow-md transition-shadow">
+                    <button class="fun-fact-question font-semibold text-pink-700 w-full text-left flex justify-between items-center">
+                        <span data-lang-en="What's Alex's favorite superhero?" data-lang-es="¿Cuál es el superhéroe favorito de Alex?">What's Alex's favorite superhero?</span>
+                        <span class="arrow text-xl">&#9654;</span>
+                    </button>
+                    <p class="fun-fact-answer is-collapsed mt-2 text-gray-700 pl-4" data-lang-en="Spider-Man! He loves swinging from webs (imaginary ones, of course!). 🕷️" data-lang-es="¡El Hombre Araña! Le encanta columpiarse en telarañas (imaginarias, ¡claro!). 🕷️">Spider-Man! He loves swinging from webs (imaginary ones, of course!). 🕷️</p>
+                </div>
+                <div class="fun-fact p-4 bg-amber-100 rounded-lg shadow hover:shadow-md transition-shadow">
+                    <button class="fun-fact-question font-semibold text-amber-700 w-full text-left flex justify-between items-center">
+                        <span data-lang-en="What's Alex's dream job (right now)?" data-lang-es="¿Cuál es el trabajo soñado de Alex (ahorita)?">What's Alex's dream job (right now)?</span>
+                        <span class="arrow text-xl">&#9654;</span>
+                    </button>
+                    <p class="fun-fact-answer is-collapsed mt-2 text-gray-700 pl-4" data-lang-en="A professional soccer player, just like his heroes! ⚽🏆" data-lang-es="¡Un jugador de fútbol profesional, igual que sus héroes! ⚽🏆">A professional soccer player, just like his heroes! ⚽🏆</p>
+                </div>
+                 <div class="fun-fact p-4 bg-lime-100 rounded-lg shadow hover:shadow-md transition-shadow">
+                    <button class="fun-fact-question font-semibold text-lime-700 w-full text-left flex justify-between items-center">
+                        <span data-lang-en="What's Alex's silliest talent?" data-lang-es="¿Cuál es el talento más vacilón de Alex?">What's Alex's silliest talent?</span>
+                        <span class="arrow text-xl">&#9654;</span>
+                    </button>
+                    <p class="fun-fact-answer is-collapsed mt-2 text-gray-700 pl-4" data-lang-en="He can wiggle his ears independently! Try it, it's tricky!👂" data-lang-es="¡Puede mover las orejas independientemente! ¡Intentalo, es difícil!👂">He can wiggle his ears independently! Try it, it's tricky!👂</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; <span id="currentYear"></span> <span data-lang-en="Alex's Soccer World - Made with ❤️ for my Kindergarten Project" data-lang-es="El Mundo de Fútbol de Alex - Hecho con ❤️ para mi Proyecto del Kínder">Alex's Soccer World - Made with ❤️ for my Kindergarten Project</span></p>
+        <nav class="footer-nav mt-2">
+            <a href="index.html" data-lang-en="Home" data-lang-es="Inicio">Home</a>
+            <a href="about.html" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
+            <a href="gallery.html" data-lang-en="Photo Gallery" data-lang-es="Galería de Fotos">Photo Gallery</a>
+            <a href="adventures.html" data-lang-en="My Adventures" data-lang-es="Mis Aventuras">My Adventures</a>
+            <a href="funzone.html" data-lang-en="Fun Zone" data-lang-es="Zona Divertida">Fun Zone</a>
+            <a href="favorites.html" data-lang-en="My Favorites" data-lang-es="Mis Favoritos">My Favorites</a>
+            <a href="contact.html" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+            <!-- More links can go here -->
+        </nav>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Active Nav Link Script
+        const currentPageAbout = window.location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll('.nav-links a, .footer-nav a').forEach(link => {
+            if (link.getAttribute('href') === currentPageAbout) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // Fun Facts Toggle Logic
+        const funFactItems = document.querySelectorAll('.fun-fact');
+        funFactItems.forEach(item => {
+            const questionButton = item.querySelector('.fun-fact-question');
+            const answer = item.querySelector('.fun-fact-answer');
+            const arrow = item.querySelector('.arrow');
+
+            if (questionButton && answer && arrow) {
+                questionButton.addEventListener('click', () => {
+                    const isCollapsed = answer.classList.toggle('is-collapsed');
+                    arrow.innerHTML = isCollapsed ? '&#9654;' : '&#9660;'; // Right or Down triangle
+                    questionButton.classList.toggle('open', !isCollapsed);
+                });
+            }
+        });
+    </script>
+    <script src="language.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-en="Alex's Photo Gallery - Awesome Moments!" data-lang-es="Galería de Fotos de Alex - ¡Momentos Geniales!">Alex's Photo Gallery - Awesome Moments!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-800">
+
+    <header class="main-nav">
+        <div class="page-container flex justify-between items-center">
+            <div class="site-title">
+                <span class="soccer-ball-logo">⚽</span>
+                <span data-lang-en="Alex's Soccer World" data-lang-es="El Mundo de Fútbol de Alex">Alex's Soccer World</span>
+            </div>
+            <div class="language-switcher" style="display: flex; align-items: center; gap: 10px;">
+                <button id="lang-en" class="language-button active-lang" data-lang-en="English" data-lang-es="Inglés">English</button>
+                <button id="lang-es" class="language-button" data-lang-en="Spanish" data-lang-es="Español">Español</button>
+            </div>
+            <button id="hamburger-button" class="hamburger-button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-icon">☰</span>
+            </button>
+            <div id="mobile-menu" class="mobile-menu-hidden">
+                <nav class="nav-links">
+                    <a href="index.html" data-lang-en="Home" data-lang-es="Inicio">Home</a>
+                    <a href="about.html" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
+                    <a href="gallery.html" class="active" data-lang-en="Photo Gallery" data-lang-es="Galería de Fotos">Photo Gallery</a>
+                    <a href="adventures.html" data-lang-en="My Adventures" data-lang-es="Mis Aventuras">My Adventures</a>
+                    <a href="funzone.html" data-lang-en="Fun Zone" data-lang-es="Zona Divertida">Fun Zone</a>
+                    <a href="favorites.html" data-lang-en="My Favorites" data-lang-es="Mis Favoritos">My Favorites</a>
+                    <a href="contact.html" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container py-12 md:py-16">
+        <div class="content-card">
+            <h1 class="card-title justify-center"><span class="icon mr-2">📸</span><span data-lang-en="Alex's Awesome Photo Gallery!" data-lang-es="¡La Galería de Fotos Asombrosa de Alex!">Alex's Awesome Photo Gallery!</span></h1>
+            
+            <p class="text-lg text-center mt-4 mb-8" data-lang-en="Check out some of my favorite pictures! Click on them to see them bigger (feature coming soon!)." data-lang-es="¡Mirá algunas de mis fotos favoritas! Hacé clic en ellas para verlas más grandes (¡función próximamente!).">Check out some of my favorite pictures! Click on them to see them bigger (feature coming soon!).</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Placeholder Images -->
+                <div class="gallery-item bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://placehold.co/400x300/8B5CF6/FFFFFF?text=Fun+Moment+1&font=Inter" alt="Gallery Image 1" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full h-auto object-cover aspect-video">
+                    <h3 class="text-xl font-bold mb-1" data-lang-en="Fun Moment 1" data-lang-es="Momento Chiva 1">Fun Moment 1</h3>
+                    <p class="text-center text-sm mt-2 text-gray-600" data-lang-en="Playing at the park" data-lang-es="Jugando en el parque">Playing at the park</p>
+                </div>
+                <div class="gallery-item bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://placehold.co/400x300/EC4899/FFFFFF?text=Soccer+Action!&font=Inter" alt="Gallery Image 2" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full h-auto object-cover aspect-video">
+                    <h3 class="text-xl font-bold mb-1" data-lang-en="Soccer Action!" data-lang-es="¡Acción Futbolera!">Soccer Action!</h3>
+                    <p class="text-center text-sm mt-2 text-gray-600" data-lang-en="My best goal!" data-lang-es="¡Mi mejor gol!">My best goal!</p>
+                </div>
+                <div class="gallery-item bg-white p-3 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://placehold.co/400x300/10B981/FFFFFF?text=Family+Time&font=Inter" alt="Gallery Image 3" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full h-auto object-cover aspect-video">
+                    <h3 class="text-xl font-bold mb-1" data-lang-en="Family Time" data-lang-es="Tiempo en Familia">Family Time</h3>
+                    <p class="text-center text-sm mt-2 text-gray-600" data-lang-en="With my family" data-lang-es="Con mi familia">With my family</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x300/F59E0B/FFFFFF?text=Birthday+Fun&font=Inter" alt="Gallery Image 4" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full h-auto object-cover aspect-video">
+                    <h3 class="text-xl font-bold mb-1" data-lang-en="Birthday Fun" data-lang-es="Diversión de Cumpleaños">Birthday Fun</h3>
+                    <p class="text-center text-sm mt-2 text-gray-600" data-lang-en="My birthday party" data-lang-es="Mi fiesta de cumpleaños">My birthday party</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x300/3B82F6/FFFFFF?text=Cool+Pose&font=Inter" alt="Gallery Image 5" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full h-auto object-cover aspect-video">
+                    <h3 class="text-xl font-bold mb-1" data-lang-en="Cool Pose" data-lang-es="Pose Tuanis">Cool Pose</h3>
+                    <p class="text-center text-sm mt-2 text-gray-600" data-lang-en="Showing off my jersey" data-lang-es="Luciendo mi camiseta">Showing off my jersey</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x300/EF4444/FFFFFF?text=Holiday+Snap&font=Inter" alt="Gallery Image 6" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full h-auto object-cover aspect-video">
+                    <h3 class="text-xl font-bold mb-1" data-lang-en="Holiday Snap" data-lang-es="Foto de Vacaciones">Holiday Snap</h3>
+                    <p class="text-center text-sm mt-2 text-gray-600" data-lang-en="Vacation time!" data-lang-es="¡Tiempo de vacaciones!">Vacation time!</p>
+                </div>
+                <!-- Add more gallery items as needed -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white p-4 rounded-lg shadow-xl max-w-3xl max-h-full relative">
+            <img id="modalImage" src="" alt="Enlarged photo" class="max-w-full max-h-[80vh] block mx-auto">
+            <button id="closeModal" class="absolute top-2 right-2 text-white bg-red-500 hover:bg-red-700 rounded-full p-2 text-2xl leading-none">&times;</button>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; <span id="currentYear"></span> <span data-lang-en="Alex's Soccer World - Made with ❤️ for my Kindergarten Project" data-lang-es="El Mundo de Fútbol de Alex - Hecho con ❤️ para mi Proyecto del Kínder">Alex's Soccer World - Made with ❤️ for my Kindergarten Project</span></p>
+        <nav class="footer-nav mt-2">
+            <a href="index.html" data-lang-en="Home" data-lang-es="Inicio">Home</a>
+            <a href="about.html" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
+            <a href="gallery.html" data-lang-en="Photo Gallery" data-lang-es="Galería de Fotos">Photo Gallery</a>
+            <a href="adventures.html" data-lang-en="My Adventures" data-lang-es="Mis Aventuras">My Adventures</a>
+            <a href="funzone.html" data-lang-en="Fun Zone" data-lang-es="Zona Divertida">Fun Zone</a>
+            <a href="favorites.html" data-lang-en="My Favorites" data-lang-es="Mis Favoritos">My Favorites</a>
+            <a href="contact.html" data-lang-en="Contact" data-lang-es="Contacto">Contact</a>
+            <!-- More links can go here -->
+        </nav>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Active Nav Link Script (copied from other pages for consistency)
+        const currentPageGallery = window.location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll('.nav-links a, .footer-nav a').forEach(link => {
+            if (link.getAttribute('href') === currentPageGallery) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // Image Modal Logic
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeModalBtn = document.getElementById('closeModal');
+        const galleryImages = document.querySelectorAll('.gallery-item img');
+
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+                modalImg.src = img.src; // Use the same src for now, ideally would be a larger version
+                modalImg.alt = img.alt;
+            });
+        });
+
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', () => {
+                modal.classList.add('hidden');
+            });
+        }
+
+        // Optional: Close modal if clicked outside the image content
+        if (modal) {
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) { // Check if the click is on the modal backdrop itself
+                    modal.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+    <script src="language.js" defer></script>
+</body>
+</html>
