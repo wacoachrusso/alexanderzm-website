@@ -20,6 +20,8 @@ body {
     padding: 1rem 1.5rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border-bottom: 4px solid #16a34a; /* Darker green accent, green-600 */
+    position: relative; /* Added for z-index context */
+    z-index: 500;       /* Added to ensure header is above static content */
 }
 
 .main-nav .page-container {
@@ -148,6 +150,15 @@ body {
 
     #mobile-menu.mobile-menu-visible {
         display: block; /* Show when JS adds this class */
+        position: absolute; /* Crucial for positioning below the header */
+        top: 100%; /* Position it right below the header */
+        left: 0;
+        right: 0;
+        background-color: #15803d; /* Darker green, like green-700 for contrast */
+        padding: 1rem;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        border-top: 1px solid #16a34a; /* green-600 */
+        z-index: 1000; /* Ensure mobile menu is on top of other content */
     }
 
     /* Styles for nav-links when inside the visible mobile menu */

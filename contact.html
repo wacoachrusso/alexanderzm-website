@@ -53,6 +53,28 @@
                 <span data-lang-en="She'll make sure Alex gets your wonderful message!" data-lang-es="¡Ella se asegurará de que Alex reciba tu maravilloso mensaje!">She'll make sure Alex gets your wonderful message!</span>
             </p>
 
+            <!-- Netlify Contact Form -->
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="mt-12 max-w-xl mx-auto text-left bg-white p-8 rounded-lg shadow-xl">
+                <p class="hidden">
+                    <label data-lang-en="Don’t fill this out if you’re human" data-lang-es="No llenes esto si eres humano">Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                </p>
+                <div class="mb-6">
+                    <label for="name" class="block mb-2 text-sm font-medium text-gray-700" data-lang-en="Your Name" data-lang-es="Tu Nombre">Your Name</label>
+                    <input type="text" id="name" name="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-3" placeholder="Alex's Friend" required>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-700" data-lang-en="Your Grown-up's Email" data-lang-es="El Correo de tu Adulto">Your Grown-up's Email</label>
+                    <input type="email" id="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-3" placeholder="grownup@example.com" required>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-700" data-lang-en="Your Message for Alex" data-lang-es="Tu Mensaje para Alex">Your Message for Alex</label>
+                    <textarea id="message" name="message" rows="5" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Write something nice for Alex..." required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="hero-button bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-lg" data-lang-en="Send Message" data-lang-es="Enviar Mensaje">Send Message</button>
+                </div>
+            </form>
+
             <div class="contact-icons flex justify-center space-x-8 text-5xl text-indigo-500 mt-10">
                 <span>👋</span> <!-- Waving hand -->
                 <span>🎨</span> <!-- Artist palette for drawings -->
