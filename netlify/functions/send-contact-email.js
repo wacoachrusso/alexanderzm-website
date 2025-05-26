@@ -48,15 +48,15 @@ export const handler = async (event) => {
           <style>
               body { font-family: 'Inter', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333333; }
               .container { width: 100%; max-width: 600px; margin: 20px auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-              .header { background-color: #22c55e; padding: 30px 20px; text-align: center; }
+              .header { background-color: #34d399; padding: 30px 20px; text-align: center; }
               .header img { max-width: 150px; height: auto; }
               .content { padding: 30px 25px; line-height: 1.6; }
-              .content h1 { color: #1e3a8a; font-size: 24px; margin-top: 0; }
+              .content h1 { color: #0d9488; font-size: 24px; margin-top: 0; }
               .content p { margin-bottom: 15px; }
-              .data-label { font-weight: bold; color: #4f46e5; }
+              .data-label { font-weight: bold; color: #2563eb; }
               .footer { background-color: #eef2ff; padding: 20px; text-align: center; font-size: 12px; color: #555555; }
-              .footer a { color: #4f46e5; text-decoration: none; }
-              .button { display: inline-block; background-color: #4f46e5; color: #ffffff !important; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px; }
+              .footer a { color: #2563eb; text-decoration: none; }
+              .button { display: inline-block; background-color: #2563eb; color: #ffffff !important; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px; }
           </style>
       </head>
       <body>
@@ -71,7 +71,7 @@ export const handler = async (event) => {
                   <p><span class="data-label">From:</span> ${name}</p>
                   <p><span class="data-label">Grown-up's Email:</span> ${senderEmail}</p>
                   <p><span class="data-label">Message:</span></p>
-                  <p style="background-color: #f9fafb; border-left: 3px solid #22c55e; padding: 10px; margin-left: 10px;">
+                  <p style="background-color: #f9fafb; border-left: 3px solid #34d399; padding: 10px; margin-left: 10px;">
                       ${message.replace(/\n/g, '<br>')}
                   </p>
       
