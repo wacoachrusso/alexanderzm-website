@@ -336,15 +336,34 @@ body {
 }
 
 /* Utility for playful text */
-.text-fun {
-    color: #dd571c; /* Example: a fun orange */
-    font-weight: bold;
+
+/* Responsive YouTube Embed */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #f0f0f0; /* Light background while iframe loads */
+    border-radius: 8px; /* Match card style */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Match card style */
 }
 
-/* Add more custom styles as we build out pages */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Ensure no iframe border */
+}
+
+.music-section .card-title .icon { /* Ensure icon visibility */
+    display: inline-block;
+}
 
 /* Language Switcher Styles */
-
+/* Note: The HTML uses class 'language-button'. We'll assume .lang-btn was used in CSS for these specific styles. */
 .lang-btn {
     background-color: transparent; 
     color: white;
