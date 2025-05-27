@@ -55,6 +55,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Load saved language or default to English
-    const savedLang = localStorage.getItem('alexWebsiteLanguage') || 'en';
-    setLanguage(savedLang);
+    let savedLang = localStorage.getItem('alexWebsiteLanguage') || 'en';
+    // setLanguage(savedLang); // We'll call this after defining the new setLanguage
+
+    // Transformer Info Toggle
+    const transformerInfoButtons = document.querySelectorAll('.transformer-info-btn');
+    transformerInfoButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.dataset.target;
+            const targetBio = document.getElementById(targetId);
+            if (targetBio) {
+                const isHidden = targetBio.classList.toggle('hidden');
+                // Update button text based on visibility and current language
+                const currentLang = localStorage.getItem('alexWebsiteLanguage') || 'en';
+                if (isHidden) {
+                    button.textContent = button.getAttribute(`data-lang-${currentLang}-more`) || (currentLang === 'es' ? '¡Más Info!' : 'More Info!');
+                } else {
+                    button.textContent = button.getAttribute(`data-lang-${currentLang}-less`) || (currentLang === 'es' ? '¡Menos Info!' : 'Less Info!');
+                }
+            }
+        });
+    });
+
+    // Ensure Transformer button text is updated on initial language load and switch
+    // Store original setLanguage function if it's in the same scope or make it accessible
+    const originalSetLanguage = setLanguage;
+
+    // Redefine setLanguage to include Transformer button text updates
+    window.setLanguage = (lang) => {
+        originalSetLanguage(lang); // Call original language setting logic
+
+        transformerInfoButtons.forEach(button => {
+            const targetId = button.dataset.target;
+            const targetBio = document.getElementById(targetId);
+            if (targetBio) { // Check if targetBio exists
+                if (targetBio.classList.contains('hidden')) {
+                    button.textContent = button.getAttribute(`data-lang-${lang}-more`) || (lang === 'es' ? '¡Más Info!' : 'More Info!');
+                } else {
+                    button.textContent = button.getAttribute(`data-lang-${lang}-less`) || (lang === 'es' ? '¡Menos Info!' : 'Less Info!');
+                }
+            }
+        });
+    };
+
+    // Call the enhanced setLanguage on initial load
+    window.setLanguage(savedLang);
+
 });

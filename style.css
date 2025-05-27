@@ -387,6 +387,22 @@ body {
     border-color: #16a34a; /* Darker green for border on hover */
 }
 
+
+/* Transformer Bio Section */
+.transformer-bio {
+    /* Tailwind classes in HTML already handle most styling. */
+    border: 1px solid rgba(0,0,0,0.1); /* Soft border */
+    transition: all 0.3s ease-in-out; /* Smooth appearance if we animate */
+}
+
+.transformer-bio p {
+    margin-bottom: 0.5rem; /* Space between bio points */
+}
+
+.transformer-bio p:last-child {
+    margin-bottom: 0;
+}
+
 /* Fun Facts Section Styles */
 .fun-fact-question {
     cursor: pointer;
