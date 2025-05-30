@@ -45,6 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 langEsButton.classList.remove('active-lang');
             }
         }
+
+        // Update the text of the language buttons themselves
+        if (langEnButton && langEsButton) {
+            if (lang === 'es') {
+                langEnButton.textContent = 'Inglés';
+                langEsButton.textContent = 'Español';
+            } else { // lang === 'en' or any other default
+                langEnButton.textContent = 'English';
+                langEsButton.textContent = 'Spanish';
+            }
+        }
     };
 
     if (langEnButton) {
