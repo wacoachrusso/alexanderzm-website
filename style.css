@@ -486,3 +486,52 @@ body {
 .logo-pulse-animation {
   animation: pulse 3.5s infinite ease-in-out; /* 3.5-second loop, smooth timing */
 }
+
+/* Language Switcher Button Styles - Kid Friendly! */
+.language-button {
+    font-size: 1rem; /* Adjusted for text */
+    padding: 0.5rem 1rem; /* Adjusted padding for text */
+    border: 3px solid #FFBF00; /* Bright yellow border (Gold) */
+    background-color: #FFA500; /* Bright orange background */
+    color: white; /* Text color, though flags are emojis */
+    border-radius: 15px; /* More rounded corners */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15); /* Subtle text shadow for depth if text were used */
+    line-height: 1; /* Helps center emoji if font-size affects it weirdly */
+    margin: 0 0.25rem; /* A little space between buttons, complements parent's gap */
+    display: inline-flex; /* Align items center if there were text + icon */
+    align-items: center;
+    justify-content: center;
+}
+
+.language-button:hover {
+    transform: scale(1.12); /* Slightly more pop on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    border-color: #FFD700; /* Brighter gold on hover */
+    background-color: #FFC107; /* Slightly brighter orange */
+}
+
+.language-button.active-lang {
+    background-color: #28a745; /* Vibrant Green (Bootstrap success green) */
+    border-color: #1e7e34; /* Darker Green border */
+    color: white;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5), /* Softer inner glow */
+                0 0 18px rgba(40, 167, 69, 0.3), /* Softer outer glow */
+                0 4px 8px rgba(0,0,0,0.25); /* Standard shadow */
+    transform: scale(1.08); /* Slightly larger when active */
+    position: relative; /* For potential future pseudo-elements */
+}
+
+.language-button.active-lang:hover {
+    background-color: #218838; /* Darker green on hover when active */
+    border-color: #19692c; /* Even darker green border */
+    transform: scale(1.15); /* More pop on hover for active too */
+    box-shadow: 0 0 12px rgba(33, 136, 56, 0.6),
+                0 0 22px rgba(33, 136, 56, 0.4),
+                0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* The language-switcher div itself is styled inline in the HTML for flex properties.
+   Additional global styles for it could be placed here if needed in the future. */
