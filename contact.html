@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang-en="Contact Alex - Say Hello!" data-lang-es="Contacta a Alex - ¡Decí Hola!">Contact Alex - Say Hello!</title>
+    <title data-lang-en="Contact Alex - Send a Transmission!" data-lang-es="Contacta a Alex - ¡Enviá una Transmisión!">Contact Alex - Send a Transmission!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -14,12 +14,12 @@
     <header class="main-nav">
         <div class="page-container flex justify-between items-center">
             <div class="site-title">
-                <span class="soccer-ball-logo">⚽</span>
-                <span data-lang-en="Alex's Soccer World" data-lang-es="El Mundo de Fútbol de Alex">Alex's Soccer World</span>
+                <span class="theme-logo">🤖</span>
+                <span data-lang-en="Alex's Power Zone" data-lang-es="La Zona de Poder de Alex">Alex's Power Zone</span>
             </div>
             <div class="language-switcher" style="display: flex; align-items: center; gap: 10px;"> <!-- Removed margin-left: auto and margin-right -->
-                <button id="lang-en" class="language-button active-lang">English</button>
-                <button id="lang-es" class="language-button">Español</button>
+                <button id="lang-en" class="language-button active-lang" title="English">🇺🇸</button>
+                <button id="lang-es" class="language-button" title="Español">🇲🇽</button>
             </div>
             <button id="hamburger-button" class="hamburger-button" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span class="hamburger-icon">☰</span>
@@ -39,20 +39,20 @@
     </header>
 
     <section class="mb-8 text-center">
-        <img src="images/logo.png" alt="Alex's Website Logo" class="mx-auto w-56 h-auto rounded-lg shadow-md inline-block logo-pulse-animation">
+        <img src="images/logo.png" alt="Alex's Power Zone Logo" class="mx-auto w-56 h-auto rounded-lg shadow-md inline-block logo-pulse-animation">
     </section>
 
     <main class="page-container py-12 md:py-16">
         <div class="content-card text-center">
-            <h1 class="card-title justify-center"><span class="icon mr-2">💌</span><span data-lang-en="Say Hello to Alex!" data-lang-es="¡Decíle Hola a Alex!">Say Hello to Alex!</span></h1>
+            <h1 class="card-title justify-center"><span class="icon mr-2">📡</span><span data-lang-en="Send a Transmission to Alex!" data-lang-es="¡Envíale una Transmisión a Alex!">Send a Transmission to Alex!</span></h1>
             
-            <img src="https://placehold.co/300x200/818CF8/FFFFFF?text=Friendly+Mailbox!&font=Inter" alt="Friendly Mailbox" class="mx-auto my-8 rounded-lg shadow-lg">
+            <img src="https://placehold.co/300x200/1F2937/FBBF24?text=Cybertron+Comms!&font=Orbitron" alt="Communications Tower" class="mx-auto my-8 rounded-lg shadow-lg">
 
             <p class="text-xl mt-4 mb-6 text-gray-700">
-                <span data-lang-en="Alex loves to hear from friends and family!" data-lang-es="¡A Alex le encanta saber de sus amigos y familia!">Alex loves to hear from friends and family!</span>
+                <span data-lang-en="Alex loves to get new mission reports and design ideas!" data-lang-es="¡A Alex le encanta recibir nuevos reportes de misión e ideas de diseño!">Alex loves to get new mission reports and design ideas!</span>
             </p>
             <p class="text-lg mb-4">
-                <span data-lang-en="If you'd like to send Alex a message, a drawing, or a virtual high-five, please ask a grown-up to help you get in touch with Alex's mother." data-lang-es="Si querés enviarle un mensaje, un dibujo o un choque de manos virtual a Alex, pedíle ayuda a un adulto para que te ponga en contacto con la mamá de Alex.">If you'd like to send Alex a message, a drawing, or a virtual high-five, please ask a grown-up to help you get in touch with Alex's mother.</span>
+                <span data-lang-en="If you'd like to send Alex a new Transformer design, a monster truck stunt idea, or a virtual power-up, please ask a grown-up to help you get in touch with Alex's mother." data-lang-es="Si querés enviarle a Alex un nuevo diseño de Transformer, una idea para una acrobacia de camión monstruo o un power-up virtual, pedíle ayuda a un adulto para que te ponga en contacto con la mamá de Alex.">If you'd like to send Alex a new Transformer design, a monster truck stunt idea, or a virtual power-up, please ask a grown-up to help you get in touch with Alex's mother.</span>
             </p>
             <p class="text-lg mb-8">
                 <span data-lang-en="She'll make sure Alex gets your wonderful message!" data-lang-es="¡Ella se asegurará de que Alex reciba tu maravilloso mensaje!">She'll make sure Alex gets your wonderful message!</span>
@@ -73,15 +73,15 @@
                     <textarea id="message" name="message" rows="5" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Write something nice for Alex..." required></textarea>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="hero-button bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-lg" data-lang-en="Send Message" data-lang-es="Enviar Mensaje">Send Message</button>
+                    <button type="submit" class="hero-button bg-yellow-400 hover:bg-yellow-500 text-slate-800 font-bold py-3 px-8 rounded-lg transition duration-300 text-lg" data-lang-en="Send Message" data-lang-es="Enviar Mensaje">Send Message</button>
                 </div>
             </form>
             <div id="formStatus" class="mt-4 text-center text-sm"></div>
 
-            <div class="contact-icons flex justify-center space-x-8 text-5xl text-indigo-500 mt-10">
-                <span>👋</span> <!-- Waving hand -->
-                <span>🎨</span> <!-- Artist palette for drawings -->
-                <span>🌟</span> <!-- Star for positive messages -->
+            <div class="contact-icons flex justify-center space-x-8 text-5xl text-orange-500 mt-10">
+                <span>🤖</span> <!-- Robot -->
+                <span>🚚</span> <!-- Truck -->
+                <span>💥</span> <!-- Explosion/Action -->
             </div>
             
         </div>
@@ -89,9 +89,9 @@
 
     <footer class="main-footer">
         <div class="text-center mb-4">
-            <img src="images/logo.png" alt="Alex's Logo" class="h-12 mx-auto">
+            <img src="images/logo.png" alt="Alex's Power Zone Logo" class="h-12 mx-auto">
         </div>
-        <p>&copy; <span id="currentYear"></span> <span data-lang-en="Alex's Soccer World - Made with ❤️ for my Kindergarten Project" data-lang-es="El Mundo de Fútbol de Alex - Hecho con ❤️ para mi Proyecto del Kínder">Alex's Soccer World - Made with ❤️ for my Kindergarten Project</span></p>
+        <p>&copy; <span id="currentYear"></span> <span data-lang-en="Alex's Power Zone - Made with ❤️ for my Awesome Adventures" data-lang-es="La Zona de Poder de Alex - Hecho con ❤️ para mis Aventuras Increíbles">Alex's Power Zone - Made with ❤️ for my Awesome Adventures</span></p>
         <nav class="footer-nav mt-2">
             <a href="index.html" data-lang-en="Home" data-lang-es="Inicio">Home</a>
             <a href="about.html" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</a>
